@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Amazon Aurora MySQL" uuid="61323c5d-79c2-4a8f-94d9-1bc83ce5487f">
+      <driver-ref>mysql_aurora</driver-ref>
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>db-project-sda-ap.cgnqwxv4nlvj.us-east-2.rds.amazonaws.com</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="MySQL - gym@db-project-sda-ap.cgnqwxv4nlvj.us-east-2.rds.amazonaws.com" uuid="8598af11-e776-48d1-a9bb-5a705e884425">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://db-project-sda-ap.cgnqwxv4nlvj.us-east-2.rds.amazonaws.com:3306/gym</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>

@@ -1,10 +1,12 @@
-package gms.sda_ap;
+package gms.sda_ap.model;
+
+import gms.sda_ap.controller.*;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileHandler {
+public class FileHandler extends persistenceHandler {
     String line = "";
     String splitBy = ",";
 
@@ -38,7 +40,7 @@ public class FileHandler {
             BufferedWriter bw = new BufferedWriter(fw);
 
             bw.write("\n");
-            bw.write(c.getUsername() + "," + c.getPassword() + "," + c.getCnic() + "," + c.getName() + "," + c.getGender() + "," + c.getNumber() + "," + "NULL");
+            bw.write(c.getUsername() + "," + c.getPassword() + "," + c.getCnic() + "," + c.getName() + "," + c.getGender() + "," + c.getNumber() + "," + "NULL" + "," + "NULL");
             bw.close();
 
             return true;
@@ -183,6 +185,7 @@ public class FileHandler {
                 data.add(credentials[3]);
                 data.add(credentials[4]);
                 data.add(credentials[5]);
+                data.add(credentials[6]);
 
                 s.add(data);
 
@@ -196,17 +199,17 @@ public class FileHandler {
             BufferedWriter bw = new BufferedWriter(fw);
 
 
-            for (int i = 0; i < s.size(); i++) {
-                if(s.get(i).get(0).equals(m.getUsername()))
-                    s.get(i).set(5, p.getID());
+            for (ArrayList<String> strings : s) {
+                if (strings.get(0).equals(m.getUsername()))
+                    strings.set(5, p.getID());
             }
 
-            for (int i = 0; i < s.size(); i++) {
-                for (int j = 0; j < s.get(i).size(); j++) {
-                    if (j == 5)
-                        bw.write(s.get(i).get(j));
+            for (ArrayList<String> strings : s) {
+                for (int j = 0; j < strings.size(); j++) {
+                    if (j == 6  )
+                        bw.write(strings.get(j));
                     else
-                        bw.write(s.get(i).get(j) + ",");
+                        bw.write(strings.get(j) + ",");
                 }
                 bw.write("\n");
             }
@@ -271,17 +274,17 @@ public class FileHandler {
             BufferedWriter bw = new BufferedWriter(fw);
 
 
-            for (int i = 0; i < as.size(); i++) {
-                if(as.get(i).get(0).equals(m.getUsername()))
-                    as.get(i).set(6, s.getID());
+            for (ArrayList<String> a : as) {
+                if (a.get(0).equals(m.getUsername()))
+                    a.set(6, s.getID());
             }
 
-            for (int i = 0; i < as.size(); i++) {
-                for (int j = 0; j < as.get(i).size(); j++) {
+            for (ArrayList<String> a : as) {
+                for (int j = 0; j < a.size(); j++) {
                     if (j == 6)
-                        bw.write(as.get(i).get(j));
+                        bw.write(a.get(j));
                     else
-                        bw.write(as.get(i).get(j) + ",");
+                        bw.write(a.get(j) + ",");
                 }
                 bw.write("\n");
             }
@@ -311,4 +314,26 @@ public class FileHandler {
         }
         return false;
     }
+
+    public List<ArrayList<String>> getTrainerList() {
+        List<ArrayList<String>> s = new ArrayList<>();
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("trainers.txt"));
+            while ((line = br.readLine()) != null) {
+                String[] credentials = line.split(splitBy);
+
+                ArrayList<String> data = new ArrayList<>();
+                data.add(credentials[3]);
+                data.add(credentials[5]);
+
+                s.add(data);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return s;
+    }
+
 }

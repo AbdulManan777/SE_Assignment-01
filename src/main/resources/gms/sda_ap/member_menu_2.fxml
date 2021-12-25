@@ -11,27 +11,27 @@
       <Label layoutX="404.0" layoutY="66.0" style="-fx-font-size: 30; -fx-font-weight: bold; -fx-text-fill: #0071bc;" text="MEMBER PANEL" />
       <ImageView fitHeight="94.0" fitWidth="133.0" layoutX="93.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@equipment.png" />
+            <Image url="@images/equipment.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="123.0" fitWidth="113.0" layoutX="499.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@payment.png" />
+            <Image url="@images/payment.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="126.0" fitWidth="113.0" layoutX="730.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@schedule.png" />
+            <Image url="@images/schedule.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="113.0" fitWidth="113.0" layoutX="305.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@select.png" />
+            <Image url="@images/select.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="114.0" fitWidth="114.0" layoutX="116.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@trainer.png" />
+            <Image url="@images/trainer.png" />
          </image>
       </ImageView>
       <Button layoutX="134.0" layoutY="501.0" mnemonicParsing="false" onAction="#HireTrainer" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="Hire Trainer" />

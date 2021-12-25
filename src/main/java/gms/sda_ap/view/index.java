@@ -2,6 +2,7 @@ package gms.sda_ap.view;
 
 import java.io.IOException;
 
+import gms.sda_ap.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -15,7 +16,7 @@ public class index {
 
 	public void MemberPanel(ActionEvent e) throws IOException {
 
-		FXMLLoader fxmlLoader = new FXMLLoader(gms.sda_ap.App.class.getResource("member_menu_1.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("member_menu_1.fxml"));
 		Parent root = fxmlLoader.load();
 		
 		Scene scene = new Scene(root);
@@ -28,7 +29,7 @@ public class index {
 
 	public void trainerPanel(ActionEvent e) throws IOException {
 
-		FXMLLoader fxmlLoader = new FXMLLoader(gms.sda_ap.App.class.getResource("TrainerMenu.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("TrainerMenu.fxml"));
 		Parent root = fxmlLoader.load();
 		Scene scene = new Scene(root);
 		stage = (Stage) ((Node) e.getSource()).getScene().getWindow();

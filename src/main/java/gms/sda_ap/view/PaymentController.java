@@ -1,8 +1,9 @@
 package gms.sda_ap.view;
 
-import gms.sda_ap.Payment;
-import gms.sda_ap.gym;
-import gms.sda_ap.incomplete_entry;
+import gms.sda_ap.App;
+import gms.sda_ap.controller.gym;
+import gms.sda_ap.exceptions.incomplete_entry;
+import gms.sda_ap.controller.member;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -14,6 +15,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -23,20 +25,16 @@ import java.util.ResourceBundle;
 
 public class PaymentController implements Initializable {
 
-
     private  Stage stage;
+
     @FXML
     private TextField t1;
 
     @FXML
     private TextField t2;
 
-
-
     @FXML
     private Text t;
-
-
 
     @FXML
     private ComboBox<String> c;
@@ -81,12 +79,21 @@ public class PaymentController implements Initializable {
 
     public void BackPressed(ActionEvent e) throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(gms.sda_ap.App.class.getResource("member_menu_2.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("member_menu_2.fxml"));
         Parent root=fxmlLoader.load();
         Scene scene=new Scene(root);
         stage=(Stage)((Node)e.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    void setID(MouseEvent event) {
+        Node node = (Node) event.getSource();
+        stage = (Stage) node.getScene().getWindow();
+        member user = (member) stage.getUserData();
+
+        t1.setText(user.getCnic());
     }
 
 

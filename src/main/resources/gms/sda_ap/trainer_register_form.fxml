@@ -39,13 +39,13 @@
             <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-size: 20; -fx-font-weight: bold;" text="CNIC:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
             <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Speciality:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
             <ComboBox fx:id="specialityComboBox" prefHeight="31.0" prefWidth="230.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-            <Button mnemonicParsing="false" onAction="#BackPressed1" prefHeight="47.0" prefWidth="119.0" style="-fx-background-color: #0071bc; -fx-background-radius: 20; -fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: white;" text="Back" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
             <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Username:" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
             <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Password:" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
             <TextField fx:id="usernameTextField" GridPane.columnIndex="1" />
             <TextField fx:id="passwordTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
-      <Text fx:id="warning" layoutX="800.0" layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: red;" />
+      <Text fx:id="warning" layoutX="688.0" layoutY="562.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: red;" wrappingWidth="105.75" />
+      <Button layoutX="98.0" layoutY="68.0" mnemonicParsing="false" onAction="#BackPressed1" prefHeight="47.0" prefWidth="119.0" style="-fx-background-color: #0071bc; -fx-background-radius: 20; -fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: white;" text="Back" />
    </children>
 </AnchorPane>

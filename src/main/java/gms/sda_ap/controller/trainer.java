@@ -1,7 +1,13 @@
-package gms.sda_ap;
+package gms.sda_ap.controller;
+
+import gms.sda_ap.model.FileHandler;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class trainer {
 
+    private String ID;
     private String username;
     private String password;
     private String name;
@@ -10,6 +16,24 @@ public class trainer {
     private String age;
     private String speciality;
 
+    public persistenceHandler ph = new FileHandler();
+
+    public trainer(String ID, String name, String speciality){
+        this.ID = ID;
+        this.name = name;
+        this.speciality = speciality;
+    }
+
+    public trainer(){
+
+    }
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
+    public String getID(String ID) {
+        return ID;
+    }
     //SETTERS
     public void setUsername(String username) {
         this.username = username;
@@ -67,21 +91,26 @@ public class trainer {
     }
 
     public boolean validateTrainer(trainer t) {
-        FileHandler fh = new FileHandler();
+        //FileHandler fh = new FileHandler();
 
-        return fh.verifyTrainer(t);
+        return ph.verifyTrainer(t);
     }
 
     public boolean registerTrainer(trainer t) {
-        FileHandler fh = new FileHandler();
+        //FileHandler fh = new FileHandler();
 
-        return fh.registerTrainer(t);
+        return ph.registerTrainer(t);
     }
 
     public boolean createPlan(plan p) {
-        FileHandler fh = new FileHandler();
+        //FileHandler fh = new FileHandler();
 
-        return fh.createPlan(p);
+        return ph.createPlan(p);
+    }
+
+    public List<ArrayList<String>> getTrainerList(){
+        //FileHandler fh = new FileHandler();
+        return ph.getTrainerList();
     }
 
 

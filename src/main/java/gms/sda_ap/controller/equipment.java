@@ -1,4 +1,6 @@
-package gms.sda_ap;
+package gms.sda_ap.controller;
+
+import gms.sda_ap.model.FileHandler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +10,8 @@ public class equipment {
     private String id;
     private String name;
     private String manufacture_date;
+
+    public persistenceHandler ph = new FileHandler();
 
     public equipment(String id, String name, String man_date){
         this.id = id;
@@ -41,8 +45,7 @@ public class equipment {
     }
 
     public List<ArrayList<String>> getEquipmentList(){
-        FileHandler fh = new FileHandler();
 
-        return fh.getEquipmentList();
+        return ph.getEquipmentList();
     }
 }

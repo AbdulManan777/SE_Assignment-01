@@ -1,14 +1,11 @@
 package gms.sda_ap.view;
 
-import gms.sda_ap.gym;
-import gms.sda_ap.member;
-import gms.sda_ap.trainer;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import gms.sda_ap.App;
+import gms.sda_ap.controller.gym;
+import gms.sda_ap.controller.trainer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -16,9 +13,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class TrainerLoginController {
 
@@ -34,7 +28,7 @@ public class TrainerLoginController {
 
 	void BackPressed(ActionEvent e) throws Exception{
 
-		FXMLLoader fxmlLoader = new FXMLLoader(gms.sda_ap.App.class.getResource("trainerMenu.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("trainerMenu.fxml"));
 		Parent root=fxmlLoader.load();
 		Scene scene=new Scene(root);
 		stage=(Stage)((Node)e.getSource()).getScene().getWindow();
@@ -61,7 +55,7 @@ public class TrainerLoginController {
 				t.setText("Incorrect Username or Password!");
 			}
 			else{
-				FXMLLoader fxmlLoader = new FXMLLoader(gms.sda_ap.App.class.getResource("trainer_create_plan.fxml"));
+				FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("trainer_create_plan.fxml"));
 				Parent root = fxmlLoader.load();
 				Scene scene = new Scene(root);
 				stage = (Stage) ((Node) e.getSource()).getScene().getWindow();

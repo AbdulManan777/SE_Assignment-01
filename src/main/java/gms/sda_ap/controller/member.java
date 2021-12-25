@@ -1,4 +1,6 @@
-package gms.sda_ap;
+package gms.sda_ap.controller;
+
+import gms.sda_ap.model.FileHandler;
 
 public class member {
 
@@ -8,6 +10,8 @@ public class member {
     private String cnic;
     private String gender;
     private String planid;
+
+    public persistenceHandler ph = new FileHandler();
 
     public String getUsername() {
         return username;
@@ -59,16 +63,16 @@ public class member {
     }
 
     public boolean validateMember(member m) {
-        FileHandler fh = new FileHandler();
+        //FileHandler fh = new FileHandler();
 
-        boolean verify = fh.verifyMember(m);
+        boolean verify = ph.verifyMember(m);
         return verify;
     }
 
     public boolean registerMember(customer c) {
-        FileHandler fh = new FileHandler();
+        //FileHandler fh = new FileHandler();
 
-        boolean verify = fh.registerMember(c);
+        boolean verify = ph.registerMember(c);
         return verify;
     }
 

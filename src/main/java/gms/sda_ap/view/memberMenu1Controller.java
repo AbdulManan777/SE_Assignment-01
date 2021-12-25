@@ -2,6 +2,7 @@ package gms.sda_ap.view;
 
 import java.io.IOException;
 
+import gms.sda_ap.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -21,7 +22,7 @@ public class memberMenu1Controller {
 	public void LoginPressed(ActionEvent e) throws IOException {
 		
 		
-		  FXMLLoader fxmlLoader = new FXMLLoader(gms.sda_ap.App.class.getResource("member_login.fxml"));
+		  FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("member_login.fxml"));
 		   Parent root=fxmlLoader.load();
 			Scene scene=new Scene(root);
 			stage=(Stage)((Node)e.getSource()).getScene().getWindow();
@@ -35,7 +36,7 @@ public class memberMenu1Controller {
 	public void RegisterPressed(ActionEvent e) throws IOException {
 		
 		
-		  FXMLLoader fxmlLoader = new FXMLLoader(gms.sda_ap.App.class.getResource("member_register_form.fxml"));
+		  FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("member_register_form.fxml"));
 		   Parent root=fxmlLoader.load();
 			Scene scene=new Scene(root);
 			stage=(Stage)((Node)e.getSource()).getScene().getWindow();
@@ -47,7 +48,7 @@ public class memberMenu1Controller {
 	public void BackPressed(ActionEvent e) throws IOException {
 		
 		
-		  FXMLLoader fxmlLoader = new FXMLLoader(gms.sda_ap.App.class.getResource("index.fxml"));
+		  FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("index.fxml"));
 		   Parent root=fxmlLoader.load();
 			Scene scene=new Scene(root);
 			stage=(Stage)((Node)e.getSource()).getScene().getWindow();

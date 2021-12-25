@@ -1,4 +1,4 @@
-package gms.sda_ap;
+package gms.sda_ap.controller;
 
 public class Payment {
 

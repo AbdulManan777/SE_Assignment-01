@@ -1,8 +1,10 @@
 package gms.sda_ap.view;
 
-import gms.sda_ap.gym;
-import gms.sda_ap.incomplete_entry;
-import gms.sda_ap.trainer;
+import gms.sda_ap.App;
+import gms.sda_ap.controller.gym;
+import gms.sda_ap.exceptions.age;
+import gms.sda_ap.exceptions.incomplete_entry;
+import gms.sda_ap.controller.trainer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -50,7 +52,7 @@ public class TrainerRegisterFormController implements Initializable {
     @FXML
     private TextField usernameTextField;
 
-    gms.sda_ap.gym gym = new gym();
+    gms.sda_ap.controller.gym gym = new gym();
 
     @Override
     public void initialize(URL u, ResourceBundle r) {
@@ -63,7 +65,7 @@ public class TrainerRegisterFormController implements Initializable {
 
     @FXML
     void BackPressed1(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(gms.sda_ap.App.class.getResource("trainer_menu.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("TrainerMenu.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -99,7 +101,7 @@ public class TrainerRegisterFormController implements Initializable {
                 if (!status) {
                     warning.setText("Some Error Occurred! Try Again");
                 } else {
-                    FXMLLoader fxmlLoader = new FXMLLoader(gms.sda_ap.App.class.getResource("trainer_login.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("trainer_login.fxml"));
                     Parent root = fxmlLoader.load();
                     Scene scene = new Scene(root);
                     stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

@@ -1,8 +1,9 @@
 package gms.sda_ap.view;
 
-import gms.sda_ap.customer;
-import gms.sda_ap.gym;
-import gms.sda_ap.incomplete_entry;
+import gms.sda_ap.App;
+import gms.sda_ap.controller.customer;
+import gms.sda_ap.controller.gym;
+import gms.sda_ap.exceptions.incomplete_entry;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -44,7 +45,7 @@ public class memberRegisterFormController {
 
 	public void BackPressed(ActionEvent e) throws IOException {
 
-		FXMLLoader fxmlLoader = new FXMLLoader(gms.sda_ap.App.class.getResource("member_menu_1.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("member_menu_1.fxml"));
 		Parent root = fxmlLoader.load();
 		Scene scene = new Scene(root);
 		stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
@@ -77,7 +78,7 @@ public class memberRegisterFormController {
 				if (!status) {
 					warning.setText("Some Error Occurred! Try Again");
 				} else {
-					FXMLLoader fxmlLoader = new FXMLLoader(gms.sda_ap.App.class.getResource("member_login.fxml"));
+					FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("member_login.fxml"));
 					Parent root = fxmlLoader.load();
 					Scene scene = new Scene(root);
 					stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

@@ -9,17 +9,18 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gms.sda_ap.view.HireTrainerController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gms.sda_ap.view.HireTrainerController">
    <children>
       <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: white; -fx-border-color: #0071bc; -fx-border-width: 15;">
          <children>
             <Label layoutX="449.0" layoutY="63.0" style="-fx-font-size: 30; -fx-font-weight: bold; -fx-text-fill: #0071bc;" text="Hire Trainer" />
-            <TableView layoutX="63.0" layoutY="121.0" prefHeight="377.0" prefWidth="889.0">
+            <TableView fx:id="trainerTable" layoutX="63.0" layoutY="121.0" prefHeight="377.0" prefWidth="889.0">
                <columns>
-                  <TableColumn prefWidth="75.0" text="No#" />
-                  <TableColumn prefWidth="145.0" text="Trainer Name" />
-                  <TableColumn prefWidth="668.0" text="Speciality" />
+                  <TableColumn fx:id="idCol" prefWidth="75.0" text="No#" />
+                  <TableColumn fx:id="tName" prefWidth="145.0" text="Trainer Name" />
+                  <TableColumn fx:id="spec" prefWidth="668.0" text="Speciality" />
                </columns>
             </TableView>
             <GridPane layoutX="536.0" layoutY="499.0" prefHeight="67.0" prefWidth="440.0">
@@ -34,10 +35,11 @@
                <children>
                   <Button mnemonicParsing="false" onAction="#SubmitTrainer" prefHeight="43.0" prefWidth="91.0" style="-fx-background-color: #0071bc; -fx-background-radius: 10; -fx-font-size: 20; -fx-pref-width: 100; -fx-pref-height: 50;" text="Submit" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                   <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Trainer #" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <TextField GridPane.columnIndex="1" />
+                  <TextField fx:id="tid" GridPane.columnIndex="1" />
                </children>
             </GridPane>
             <Button layoutX="14.0" layoutY="509.0" mnemonicParsing="false" onAction="#BackPressed1" prefHeight="47.0" prefWidth="119.0" style="-fx-background-color: #0071bc; -fx-background-radius: 20; -fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: white;" text="Back" />
+            <Text fx:id="warning" layoutX="311.0" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" />
          </children>
       </AnchorPane>
    </children>

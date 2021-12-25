@@ -1,6 +1,6 @@
 package gms.sda_ap.model;
 
-import gms.sda_ap.customer;
+import gms.sda_ap.controller.customer;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 

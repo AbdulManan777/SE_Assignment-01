@@ -1,9 +1,12 @@
-package gms.sda_ap;
+package gms.sda_ap.controller;
+
+import gms.sda_ap.model.FileHandler;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class gym {
+    public persistenceHandler ph = new FileHandler();
 
     private String RecipetDate;
 
@@ -77,9 +80,15 @@ public class gym {
     }
 
     public void StorePayment(String rec) {
-        FileHandler f = new FileHandler();
-        boolean paymentMade = f.StorePayment(a, id, rec);
 
+        //FileHandler f = new FileHandler();
+        boolean paymentMade = ph.StorePayment(a, id, rec);
+
+    }
+
+    public List<ArrayList<String>> getTrainerList() {
+        trainer t = new trainer();
+        return t.getTrainerList();
     }
 
 

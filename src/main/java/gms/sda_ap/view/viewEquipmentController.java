@@ -1,7 +1,8 @@
 package gms.sda_ap.view;
 
-import gms.sda_ap.equipment;
-import gms.sda_ap.gym;
+import gms.sda_ap.App;
+import gms.sda_ap.controller.equipment;
+import gms.sda_ap.controller.gym;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -38,7 +39,7 @@ public class viewEquipmentController implements Initializable {
     @FXML
     private TableColumn<equipment, String> manuCol;
 
-    gms.sda_ap.gym gym = new gym();
+    gms.sda_ap.controller.gym gym = new gym();
     @Override
     public void initialize(URL u, ResourceBundle r) {
 
@@ -61,7 +62,7 @@ public class viewEquipmentController implements Initializable {
 
     @FXML
     void BackPressed1(ActionEvent e) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(gms.sda_ap.App.class.getResource("member_menu_2.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("member_menu_2.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         stage = (Stage) ((Node) e.getSource()).getScene().getWindow();

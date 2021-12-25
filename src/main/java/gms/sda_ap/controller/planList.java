@@ -1,4 +1,4 @@
-package gms.sda_ap;
+package gms.sda_ap.controller;
 
 import java.util.ArrayList;
 

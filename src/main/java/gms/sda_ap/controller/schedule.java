@@ -1,12 +1,14 @@
-package gms.sda_ap;
+package gms.sda_ap.controller;
 
 
-import gms.sda_ap.view.ScheduleController;
+import gms.sda_ap.model.FileHandler;
 
 public class schedule {
 
     private String ID;
     private String schedule;
+
+    public persistenceHandler ph = new FileHandler();
 
     public schedule(String ID, String schedule){
         this.ID = ID;
@@ -32,8 +34,8 @@ public class schedule {
     }
 
     public Boolean setMemberSchedule(schedule s, member m){
-        FileHandler fh = new FileHandler();
+        //FileHandler fh = new FileHandler();
 
-        return fh.setMemberSchedule(s, m);
+        return ph.setMemberSchedule(s, m);
     }
 }

@@ -1,4 +1,6 @@
-package gms.sda_ap;
+package gms.sda_ap.controller;
+
+import gms.sda_ap.model.FileHandler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +13,8 @@ public class plan {
     private String description;
 
     private String schedule;
+
+    public persistenceHandler ph = new FileHandler();
 
     public plan(String idp, String pn, String desc) {
         this.ID = idp;
@@ -58,18 +62,18 @@ public class plan {
     }
 
     public List<ArrayList<String>> getPlanList(){
-        FileHandler fh = new FileHandler();
-        return fh.getPlanList();
+        //FileHandler fh = new FileHandler();
+        return ph.getPlanList();
     }
 
     public ArrayList<String> getScheduleList(){
-        FileHandler fh = new FileHandler();
-        return fh.getScheduleList();
+        //FileHandler fh = new FileHandler();
+        return ph.getScheduleList();
     }
 
     public Boolean setMemberPlan(plan p, member m){
-        FileHandler fh = new FileHandler();
+        //FileHandler fh = new FileHandler();
 
-        return fh.setMemberPlan(p, m);
+        return ph.setMemberPlan(p, m);
     }
 }

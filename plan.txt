@@ -1,6 +1,5 @@
-1,plan1,hehehehehehe,time1
-2,plan2,hehehehehehe,time2
-3,plan3,hehehehehehe,time3
-4,plan4,hehehehehehe,time4
-5,plan5,hehehehehehe,time5
-4,test,asdafsdfsdfs,time4
+1,SHOULDER DAY,Pushups are the ultimate shoulder workout, arguably one of the most fundamental ones for both strength and muscle building.,3-4 Days in a week
+2,bent over barbell rows,Your back muscles are the primary beneficiaries of the bent-over row, and as they increase in strength your posture will also improve so you don't slump as much., Once a Week
+3,seated dumbbell press,The sitting press can be a great way to isolate the muscle groups needed to be hit while minimizing spinal extension, which will result in great shoulder usage and less leverage to move the lift ,Every evening 1 time in a week
+4,pullups or lat pulldowns,Lat pulldowns put you in a fixed position, allowing more focus on the lats and control over the amount of resistance you want to use.,Jab mrzi kr lo
+5,Chest and Knee,issy kro boht faida ha aesh kro ge, ye b jab mrzi kr lo

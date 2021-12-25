@@ -5,8 +5,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import gms.sda_ap.gym;
-import gms.sda_ap.plan;
+import gms.sda_ap.App;
+import gms.sda_ap.controller.gym;
+import gms.sda_ap.controller.plan;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -41,7 +42,7 @@ public class TrainerCreatePlanController implements Initializable {
 
 	private Stage stage;
 
-	gms.sda_ap.gym gym = new gym();
+	gms.sda_ap.controller.gym gym = new gym();
 	@Override
 	public void initialize(URL u, ResourceBundle r) {
 
@@ -77,7 +78,7 @@ public class TrainerCreatePlanController implements Initializable {
 
 	public void BackPressed(ActionEvent e) throws IOException {
 
-		FXMLLoader fxmlLoader = new FXMLLoader(gms.sda_ap.App.class.getResource("trainer_login.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("trainer_login.fxml"));
 		Parent root = fxmlLoader.load();
 		Scene scene = new Scene(root);
 		stage = (Stage) ((Node) e.getSource()).getScene().getWindow();

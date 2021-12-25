@@ -20,7 +20,7 @@ public class App extends Application {
         scene = new Scene(loadFXML("index"), 1000, 600);
         stage.setScene(scene);
         stage.show();
-        
+
     }
 
     static void setRoot(String fxml) throws IOException {

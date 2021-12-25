@@ -1,6 +1,4 @@
-package gms.sda_ap;
-
-import javax.persistence.Persistence;
+package gms.sda_ap.controller;
 
 public class persistenceFactory {
     private static persistenceFactory pf;

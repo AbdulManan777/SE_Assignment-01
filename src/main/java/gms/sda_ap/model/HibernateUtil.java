@@ -1,12 +1,13 @@
 package gms.sda_ap.model;
 
-import java.util.Properties;
-
+import gms.sda_ap.controller.member;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
+
+import java.util.Properties;
 
 public class HibernateUtil {
     private static SessionFactory sessionFactory;
@@ -31,7 +32,7 @@ public class HibernateUtil {
                 Configuration configuration = new Configuration();
                 configuration.setProperties(settings);
 
-            configuration.addAnnotatedClass(gms.sda_ap.member.class);
+            configuration.addAnnotatedClass(member.class);
 
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties()).build();

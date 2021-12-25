@@ -6,15 +6,25 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: white; -fx-border-color: #0071bc; -fx-border-width: 15;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gms.sda_ap.view.index">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: white; -fx-border-color: #0071bc; -fx-border-width: 15;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gms.sda_ap.view.index">
    <children>
       <Button layoutX="120.0" layoutY="293.0" mnemonicParsing="false" onAction="#MemberPanel" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #0071bc; -fx-background-radius: 20; -fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: white;" text="MEMBER PANEL" />
       <Button layoutX="709.0" layoutY="284.0" mnemonicParsing="false" onAction="#trainerPanel" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #0071bc; -fx-background-radius: 20; -fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: white;" text="TRAINER PANEL" />
       <ImageView fitHeight="211.0" fitWidth="255.0" layoutX="398.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@logo.png" />
+            <Image url="@images/logo.png" />
          </image>
       </ImageView>
       <Label layoutX="437.0" layoutY="549.0" style="-fx-background-color: white;" text="© &quot;All rights reserved&quot;" />
+      <ImageView fitHeight="110.0" fitWidth="162.0" layoutX="135.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/memberPanel.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="93.0" fitWidth="149.0" layoutX="725.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/trainerPanel.PNG" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

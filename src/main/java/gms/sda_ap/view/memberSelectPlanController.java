@@ -1,9 +1,9 @@
 package gms.sda_ap.view;
 
-import gms.sda_ap.gym;
-import gms.sda_ap.member;
-import gms.sda_ap.plan;
-import javafx.beans.property.SimpleStringProperty;
+import gms.sda_ap.App;
+import gms.sda_ap.controller.gym;
+import gms.sda_ap.controller.member;
+import gms.sda_ap.controller.plan;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -21,7 +21,6 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.lang.reflect.Member;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -75,7 +74,7 @@ public class memberSelectPlanController implements Initializable {
 
     public void BackPressed1(ActionEvent e) throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(gms.sda_ap.App.class.getResource("member_menu_2.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("member_menu_2.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
@@ -93,7 +92,7 @@ public class memberSelectPlanController implements Initializable {
         boolean status = gym.setMemberPlan(p, user);
         if(status)
         {
-            FXMLLoader fxmlLoader = new FXMLLoader(gms.sda_ap.App.class.getResource("member_menu_2.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("member_menu_2.fxml"));
             Parent root = fxmlLoader.load();
             Scene scene = new Scene(root);
             stage = (Stage) ((Node) e.getSource()).getScene().getWindow();

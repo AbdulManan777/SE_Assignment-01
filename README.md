@@ -1,0 +1,1 @@
+Gym Management System is developed using best software design principles creating a balance between coulping and cohesion of classes. Contains all the required functionalities of managing a gym. Frontend by JavaFX.

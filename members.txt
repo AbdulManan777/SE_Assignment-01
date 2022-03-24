@@ -1,9 +1,6 @@
 talha,12345,3220336642351,TalhaZebKhan,Male,3,3
 abdul,22334,1234566789033,AbdulManan,Male,NULL,NULL
 Saad,123456,0000000000,Saad1,Male,123456789,NULL
-test,test,test,test,test,test,NULL
-test,test,test,test,test,test,NULL
-
-null,null,null,null,null,null,NULL,NULL
-null,null,null,null,null,null,NULL,NULL
-null,null,null,null,null,null,NULL,NULL
+ahmed,12321,1234567890,Ahmed,male,123456,NULL,NULL
+test,test,test,test,test,test,NULL,NULL
+talha,121,1234567890,talha,male,12345678,NULL,NULL

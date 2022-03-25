@@ -2,3 +2,4 @@
 2,Muscles
 3,Power
 4,Athlete
+5,Chin Ups

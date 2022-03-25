@@ -1,3 +1,4 @@
 1,Cable Crossover Machine,11-02-2020
 2,Adjustable Weight Bench.,24-04-2019
 3,Chest Press Machine.,03-05-2018
+4,Training Bench,04-06-2017

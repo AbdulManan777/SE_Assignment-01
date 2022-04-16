@@ -11,6 +11,7 @@ public class member {
     private String cnic;
     private String gender;
     private String planid;
+    private String phone;
 
     public persistenceHandler ph = new FileHandler();
 
@@ -25,6 +26,18 @@ public class member {
     public String getPassword() {
         return password;
     }
+
+    public String getPhone() {
+
+        return phone;
+    }
+
+
+    public void setPhone(String p){ this.phone=p; }
+
+
+
+
 
     public void setPassword(String password) {
         this.password = password;

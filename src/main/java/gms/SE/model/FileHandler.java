@@ -3,6 +3,7 @@ package gms.SE.model;
 import gms.SE.controller.*;
 
 import java.io.*;
+import java.lang.reflect.Member;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +25,8 @@ public class FileHandler extends persistenceHandler {
                     m.setCnic(credentials[2]);
                     m.setName(credentials[3]);
                     m.setGender(credentials[4]);
+
+                    m.setPhone(credentials[5]);
                     return true;
                 }
             }
@@ -34,7 +37,72 @@ public class FileHandler extends persistenceHandler {
         return authentication;
     }
 
-    public boolean registerMember(customer c) {
+
+    public void updateMember(member m) {
+
+        try {
+
+            BufferedReader br = new BufferedReader(new FileReader("members.txt"));
+
+            while ((line = br.readLine()) != null) {
+                String[] credentials = line.split(splitBy);
+
+                if (credentials[2].equals(m.getCnic())) {
+
+                } else {
+
+                    FileWriter fw = new FileWriter("temp.txt", true);
+                    BufferedWriter bw = new BufferedWriter(fw);
+
+                    bw.write(credentials[0] + "," + credentials[1] + "," + credentials[2] + "," + credentials[3] + "," + credentials[4] + "," + credentials[5] + "," + "NULL" + "," + "NULL");
+                    bw.write(("\n"));
+                    bw.close();
+
+                }
+
+            }
+
+            br.close();
+
+            FileWriter fw = new FileWriter("temp.txt", true);
+            BufferedWriter bw = new BufferedWriter(fw);
+
+            bw.write(m.getUsername() + "," + m.getPassword() + "," + m.getCnic() + "," + m.getName() + "," + m.getGender() + "," + m.getPhone() + "," + "NULL" + "," + "NULL");
+            bw.write(("\n"));
+            bw.close();
+
+            File f=new File("members.txt");
+            File f2=new File("temp.txt");
+
+
+            if(!f.delete()){
+                System.out.println("Cannot delete file");
+            }
+
+            if (!f2.renameTo(f)){
+                System.out.println("Could not rename file");
+            }
+
+            /*File f2=new File(String.valueOf(new FileReader("members.txt")));
+
+            boolean success = f.renameTo(f2);
+            if (success==true)
+               f2.delete();
+            else
+                System.out.println("Nhi hua");*/
+
+
+
+        }
+
+
+         catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+        public boolean registerMember(customer c) {
         try {
             FileWriter fw = new FileWriter("members.txt", true);
             BufferedWriter bw = new BufferedWriter(fw);

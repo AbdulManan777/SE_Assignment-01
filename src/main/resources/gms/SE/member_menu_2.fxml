@@ -6,7 +6,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: white; -fx-border-color: #0071bc; -fx-border-width: 15;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gms.SE.view.member_menu2_Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: white; -fx-border-color: #0071bc; -fx-border-width: 15;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gms.SE.view.member_menu2_Controller">
    <children>
       <Label layoutX="404.0" layoutY="66.0" style="-fx-font-size: 30; -fx-font-weight: bold; -fx-text-fill: #0071bc;" text="MEMBER PANEL" />
       <ImageView fitHeight="94.0" fitWidth="133.0" layoutX="93.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
@@ -40,5 +40,6 @@
       <Button layoutX="117.0" layoutY="277.0" mnemonicParsing="false" onAction="#viewEquipment" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="View Equipments" />
       <Button layoutX="729.0" layoutY="277.0" mnemonicParsing="false" onAction="#SelectSchedule" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="Select Schedule" />
       <Button layoutX="712.0" layoutY="493.0" mnemonicParsing="false" onAction="#BackPressed" prefHeight="47.0" prefWidth="150.0" style="-fx-background-color: #0071bc; -fx-background-radius: 20; -fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: white;" text="Back" />
+      <Button layoutX="278.0" layoutY="501.0" mnemonicParsing="false" onAction="#UpdateProfile" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="Update Profile" />
    </children>
 </AnchorPane>

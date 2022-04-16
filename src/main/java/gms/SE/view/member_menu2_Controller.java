@@ -102,4 +102,25 @@ public class member_menu2_Controller {
     }
 
 
+    public void UpdateProfile(ActionEvent e) throws IOException{
+
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("UpdateMember.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+
+
+
+
+
+
+
+    }
+
+
+
+
+
 }

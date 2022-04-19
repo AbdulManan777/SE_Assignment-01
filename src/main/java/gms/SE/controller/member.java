@@ -3,6 +3,8 @@ package gms.SE.controller;
 import gms.SE.model.FileHandler;
 import gms.SE.model.persistenceHandler;
 
+import java.io.IOException;
+
 public class member {
 
     private String username;
@@ -12,6 +14,7 @@ public class member {
     private String gender;
     private String planid;
     private String phone;
+    private String statusFLag="active";
 
     public persistenceHandler ph = new FileHandler();
 
@@ -30,6 +33,16 @@ public class member {
     public String getPhone() {
 
         return phone;
+    }
+
+    public void setStatusFLag(String s) throws IOException {
+        this.statusFLag=s;
+        FileHandler f=new FileHandler();
+        f.updateStatus(this);
+    }
+
+    public String getStatusFLag(){
+        return statusFLag;
     }
 
 
@@ -76,10 +89,10 @@ public class member {
         this.planid = planid;
     }
 
-    public boolean validateMember(member m) {
+    public int validateMember(member m) {
         //FileHandler fh = new FileHandler();
 
-        boolean verify = ph.verifyMember(m);
+        int verify = ph.verifyMember(m);
         return verify;
     }
 
@@ -107,6 +120,23 @@ public class member {
         return rec;
         // r.CashDeposit(p);
 
+    }
+
+    public boolean paymentverify(member m){
+        Payment p=new Payment();
+        boolean s=p.PaymentChecker(m);
+        return s;
+    }
+
+
+    public boolean setMemberTrainer(trainer t, member m){
+        return t.setMemberTrainer(t,m);
+    }
+
+    public boolean statusVerify(member m){
+
+        FileHandler f=new FileHandler();
+        return f.pauseMemberVerify(m);
     }
 
     /*public void getmemberReciept(Reciept r) {

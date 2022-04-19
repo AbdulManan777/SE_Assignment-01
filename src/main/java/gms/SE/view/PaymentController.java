@@ -94,6 +94,7 @@ public class PaymentController implements Initializable {
         member user = (member) stage.getUserData();
 
         t1.setText(user.getCnic());
+        t2.setText("3000");
     }
 
 

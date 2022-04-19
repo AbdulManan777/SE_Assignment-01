@@ -5,16 +5,17 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: white; -fx-border-color: #0071bc; -fx-border-width: 15;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gms.SE.view.member_menu2_Controller">
    <children>
       <Label layoutX="404.0" layoutY="66.0" style="-fx-font-size: 30; -fx-font-weight: bold; -fx-text-fill: #0071bc;" text="MEMBER PANEL" />
-      <ImageView fitHeight="94.0" fitWidth="133.0" layoutX="93.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="113.0" fitWidth="104.0" layoutX="132.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/equipment.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="123.0" fitWidth="113.0" layoutX="499.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="123.0" fitWidth="113.0" layoutX="520.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/payment.png" />
          </image>
@@ -35,11 +36,23 @@
          </image>
       </ImageView>
       <Button layoutX="134.0" layoutY="501.0" mnemonicParsing="false" onAction="#HireTrainer" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="Hire Trainer" />
-      <Button layoutX="327.0" layoutY="278.0" mnemonicParsing="false" onAction="#SelectPlan" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="Select Plan" />
+      <Button layoutX="298.0" layoutY="278.0" mnemonicParsing="false" onAction="#SelectPlan" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="View &amp; Select Plan" />
       <Button layoutX="516.0" layoutY="278.0" mnemonicParsing="false" onAction="#makePayment" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="makePayment" />
       <Button layoutX="117.0" layoutY="277.0" mnemonicParsing="false" onAction="#viewEquipment" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="View Equipments" />
       <Button layoutX="729.0" layoutY="277.0" mnemonicParsing="false" onAction="#SelectSchedule" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="Select Schedule" />
       <Button layoutX="712.0" layoutY="493.0" mnemonicParsing="false" onAction="#BackPressed" prefHeight="47.0" prefWidth="150.0" style="-fx-background-color: #0071bc; -fx-background-radius: 20; -fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: white;" text="Back" />
       <Button layoutX="278.0" layoutY="501.0" mnemonicParsing="false" onAction="#UpdateProfile" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="Update Profile" />
+      <Text fx:id="t" fill="#da260a" layoutX="397.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Button layoutX="426.0" layoutY="501.0" mnemonicParsing="false" onAction="#PauseMembership" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="Pause Membership" />
+      <ImageView fitHeight="113.0" fitWidth="124.0" layoutX="274.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/update.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="104.0" fitWidth="124.0" layoutX="447.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/images.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

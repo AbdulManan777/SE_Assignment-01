@@ -6,14 +6,15 @@ import java.io.*;
 import java.lang.reflect.Member;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class FileHandler extends persistenceHandler {
     String line = "";
     String splitBy = ",";
 
-    public boolean verifyMember(member m) {
+    public int verifyMember(member m) {
 
-        boolean authentication = false;
+        int authentication = 0;
 
         try {
             BufferedReader br = new BufferedReader(new FileReader("members.txt"));
@@ -27,7 +28,10 @@ public class FileHandler extends persistenceHandler {
                     m.setGender(credentials[4]);
 
                     m.setPhone(credentials[5]);
-                    return true;
+                    return 1;
+                }
+                else if(credentials[0].equals(m.getUsername())){
+                    return 2;
                 }
             }
         } catch (IOException e) {
@@ -38,77 +42,99 @@ public class FileHandler extends persistenceHandler {
     }
 
 
-    public void updateMember(member m) {
+    public void updateMember(member m) throws IOException {
 
-        try {
+        File originalFile = new File("members.txt");
+        BufferedReader br = new BufferedReader(new FileReader(originalFile));
 
-            BufferedReader br = new BufferedReader(new FileReader("members.txt"));
+        // Construct the new file that will later be renamed to the original
+        // filename.
+        File tempFile = new File("temp.txt");
+        PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
 
-            while ((line = br.readLine()) != null) {
-                String[] credentials = line.split(splitBy);
 
-                if (credentials[2].equals(m.getCnic())) {
+        // Read from the original file and write to the new
+        // unless content matches data to be removed.
+        while ((line = br.readLine()) != null) {
+            String[] credentials = line.split(splitBy);
+            if (credentials[2].equals(m.getCnic())) {
 
-                } else {
 
-                    FileWriter fw = new FileWriter("temp.txt", true);
-                    BufferedWriter bw = new BufferedWriter(fw);
-
-                    bw.write(credentials[0] + "," + credentials[1] + "," + credentials[2] + "," + credentials[3] + "," + credentials[4] + "," + credentials[5] + "," + "NULL" + "," + "NULL");
-                    bw.write(("\n"));
-                    bw.close();
-
-                }
-
+            } else {
+                pw.write(credentials[0] + "," + credentials[1] + "," + credentials[2] + "," + credentials[3] + "," + credentials[4] + "," + credentials[5] + ","+credentials[6]+"," + "NULL" + "," + "NULL");
+                pw.write("\n");
             }
 
-            br.close();
+        }
 
-            FileWriter fw = new FileWriter("temp.txt", true);
-            BufferedWriter bw = new BufferedWriter(fw);
-
-            bw.write(m.getUsername() + "," + m.getPassword() + "," + m.getCnic() + "," + m.getName() + "," + m.getGender() + "," + m.getPhone() + "," + "NULL" + "," + "NULL");
-            bw.write(("\n"));
-            bw.close();
-
-            File f=new File("members.txt");
-            File f2=new File("temp.txt");
+        pw.write(m.getUsername()+","+m.getPassword()+","+m.getCnic()+ "," + m.getName() + "," + m.getGender() + "," + m.getPhone() + "," +m.getStatusFLag()+","+ "NULL" + "," + "NULL");
 
 
-            if(!f.delete()){
-                System.out.println("Cannot delete file");
-            }
+        pw.println(line);
+        pw.flush();
 
-            if (!f2.renameTo(f)){
-                System.out.println("Could not rename file");
-            }
+        pw.close();
+        br.close();
 
-            /*File f2=new File(String.valueOf(new FileReader("members.txt")));
 
-            boolean success = f.renameTo(f2);
-            if (success==true)
-               f2.delete();
-            else
-                System.out.println("Nhi hua");*/
+        // Delete the original file
 
+
+       // if (!originalFile.delete()) {
+
+       // }
+
+        // Rename the new file to the filename the original file had.
+        //if (!tempFile.renameTo(originalFile)){}
+
+        PrintWriter writer = new PrintWriter("members.txt");
+        writer.print("");
+        writer.close();
+
+
+
+        File originalFile2 = new File("temp.txt");
+        BufferedReader br2 = new BufferedReader(new FileReader(originalFile2));
+
+        // Construct the new file that will later be renamed to the original
+        // filename.
+        File tempFile2 = new File("members.txt");
+        PrintWriter pw2 = new PrintWriter(new FileWriter(tempFile2));
+
+
+        // Read from the original file and write to the new
+        // unless content matches data to be removed.
+        while ((line = br2.readLine()) != null) {
+            String[] credentials = line.split(splitBy);
+
+                pw2.write(credentials[0] + "," + credentials[1] + "," + credentials[2] + "," + credentials[3] + "," + credentials[4] + "," + credentials[5] + ","+credentials[6]+"," + "NULL" + "," + "NULL");
+                pw2.write("\n");
 
 
         }
 
+        //pw2.println(line);
+        pw2.flush();
 
-         catch (IOException e) {
-            e.printStackTrace();
-        }
+        pw2.close();
+        br2.close();
+
+
+      tempFile2.delete();
+
 
     }
+
+
 
         public boolean registerMember(customer c) {
         try {
             FileWriter fw = new FileWriter("members.txt", true);
             BufferedWriter bw = new BufferedWriter(fw);
 
+
+            bw.write(c.getUsername() + "," + c.getPassword() + "," + c.getCnic() + "," + c.getName() + "," + c.getGender() + "," + c.getNumber() + ","+ c.getStatusFlag()+","+ "NULL" + "," + "NULL");
             bw.write("\n");
-            bw.write(c.getUsername() + "," + c.getPassword() + "," + c.getCnic() + "," + c.getName() + "," + c.getGender() + "," + c.getNumber() + "," + "NULL" + "," + "NULL");
             bw.close();
 
             return true;
@@ -118,6 +144,127 @@ public class FileHandler extends persistenceHandler {
         }
         return false;
     }
+
+
+    public void updateStatus(member m) throws IOException {
+
+
+
+        File originalFile = new File("members.txt");
+        BufferedReader br = new BufferedReader(new FileReader(originalFile));
+
+        // Construct the new file that will later be renamed to the original
+        // filename.
+        File tempFile = new File("temp2.txt");
+        PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
+
+
+        // Read from the original file and write to the new
+        // unless content matches data to be removed.
+
+        while ((line = br.readLine()) != null) {
+
+            String[] credentials = line.split(splitBy);
+            if (credentials[2].equals(m.getCnic())) {
+
+                pw.write(credentials[0] + "," + credentials[1] + "," + credentials[2] + "," + credentials[3] + "," + credentials[4] + "," + credentials[5] + "," + m.getStatusFLag() + "," + "NULL" + "," + "NULL");
+                pw.write("\n");
+            } else {
+
+                pw.write(credentials[0] + "," + credentials[1] + "," + credentials[2] + "," + credentials[3] + "," + credentials[4] + "," + credentials[5] + "," + credentials[6] + "," + "NULL" + "," + "NULL");
+                pw.write("\n");
+            }
+        }
+
+
+
+           // pw.println(line);
+            pw.flush();
+
+            pw.close();
+            br.close();
+
+
+            // Delete the original file
+
+
+            // if (!originalFile.delete()) {
+
+            // }
+
+            // Rename the new file to the filename the original file had.
+            //if (!tempFile.renameTo(originalFile)){}
+
+            PrintWriter writer = new PrintWriter("members.txt");
+            writer.print("");
+            writer.close();
+
+
+
+            File originalFile2 = new File("temp2.txt");
+            BufferedReader br2 = new BufferedReader(new FileReader(originalFile2));
+
+            // Construct the new file that will later be renamed to the original
+            // filename.
+            File tempFile2 = new File("members.txt");
+            PrintWriter pw2 = new PrintWriter(new FileWriter(tempFile2));
+
+
+            // Read from the original file and write to the new
+            // unless content matches data to be removed.
+            while ((line = br2.readLine()) != null) {
+                String[] credentials2 = line.split(splitBy);
+
+                pw2.write(credentials2[0] + "," + credentials2[1] + "," + credentials2[2] + "," + credentials2[3] + "," + credentials2[4] + "," + credentials2[5] + "," +credentials2[6]+","+ "NULL" + "," + "NULL");
+                pw2.write("\n");
+
+
+            }
+
+            //pw2.println(line);
+            pw2.flush();
+
+            pw2.close();
+            br2.close();
+
+
+            tempFile2.delete();
+
+
+
+
+
+        }
+
+
+
+        public boolean pauseMemberVerify(member m){
+
+
+            try {
+                BufferedReader br2 = new BufferedReader(new FileReader("members.txt"));
+                while ((line = br2.readLine()) != null) {
+                    String[] credentials2 = line.split(splitBy);
+
+                    if (m.getStatusFLag().equals(credentials2[6].equals("pause"))) {
+                        return true;
+                    }
+
+                }
+
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            return false;
+        }
+
+
+
+
+
 
     //----------------------------TRAINER---------------------------------
 
@@ -132,7 +279,7 @@ public class FileHandler extends persistenceHandler {
                 String[] credentials = line.split(splitBy);
 
                 if (credentials[0].equals(t.getUsername()) && credentials[1].equals(t.getPassword())) {
-                    t.setCnic(credentials[2]);
+                    t.setID(credentials[2]);
                     t.setName(credentials[3]);
                     t.setNumber(credentials[4]);
                     t.setSpeciality(credentials[5]);
@@ -153,8 +300,9 @@ public class FileHandler extends persistenceHandler {
             FileWriter fw = new FileWriter("trainers.txt", true);
             BufferedWriter bw = new BufferedWriter(fw);
 
+
+            bw.write(t.getUsername() + "," + t.getPassword() + "," + t.getID() + "," + t.getName() + "," + t.getNumber() + "," + t.getSpeciality() + "," + t.getAge());
             bw.write("\n");
-            bw.write(t.getUsername() + "," + t.getPassword() + "," + t.getCnic() + "," + t.getName() + "," + t.getNumber() + "," + t.getSpeciality() + "," + t.getAge());
             bw.close();
 
             return true;
@@ -394,6 +542,7 @@ public class FileHandler extends persistenceHandler {
                 ArrayList<String> data = new ArrayList<>();
                 data.add(credentials[3]);
                 data.add(credentials[5]);
+                data.add(credentials[2]);
 
                 s.add(data);
 
@@ -402,6 +551,54 @@ public class FileHandler extends persistenceHandler {
             e.printStackTrace();
         }
         return s;
+    }
+
+
+    public boolean paymentMade(member m) {
+       // String line2 = null;
+
+        try {
+            BufferedReader br2 = new BufferedReader(new FileReader("PaymentRecieved.txt"));
+            while ((line = br2.readLine()) != null) {
+                String[] credentials2 = line.split(splitBy);
+
+                if (m.getCnic().equals(credentials2[1])) {
+                    return true;
+                }
+
+            }
+
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
+
+
+    public boolean setMemberTrainer(trainer t, member m){
+
+        try {
+            FileWriter fw = new FileWriter("HireTrainer.txt", true);
+            BufferedWriter bw = new BufferedWriter(fw);
+
+
+            bw.write(m.getUsername() + "," + m.getCnic()+ "," +t.getName()+","+t.getID());
+            bw.write("\n");
+            bw.close();
+
+            return true;
+
+        } catch (IOException io) {
+            io.printStackTrace();
+        }
+        return false;
+
+
+
     }
 
 }

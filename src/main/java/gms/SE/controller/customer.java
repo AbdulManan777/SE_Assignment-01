@@ -8,6 +8,7 @@ public class customer {
     private String cnic;
     private String number;
     private String gender;
+    private String statusFlag="active";
 
     //SETTERS
     public void setUsername(String username)
@@ -34,6 +35,7 @@ public class customer {
     {
         this.gender = gender;
     }
+    public void setStatusFlag(String f){this.statusFlag=f; }
 
     //GETTERS
     public String getUsername()
@@ -60,6 +62,7 @@ public class customer {
     {
         return gender;
     }
+    public String getStatusFlag(){ return statusFlag; }
 
     public boolean registerCustomer(customer c)
     {

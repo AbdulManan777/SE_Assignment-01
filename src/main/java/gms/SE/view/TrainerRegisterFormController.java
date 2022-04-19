@@ -91,7 +91,7 @@ public class TrainerRegisterFormController implements Initializable {
                 t.setUsername(usernameTextField.getText());
                 t.setPassword(passwordTextField.getText());
                 t.setName(nameTextField.getText());
-                t.setCnic(cnicTextField.getText());
+                t.setID(cnicTextField.getText());
                 t.setSpeciality(specialityComboBox.getValue());
                 t.setNumber(numberTextField.getText());
                 t.setAge(ageTextField.getText());

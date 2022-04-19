@@ -8,11 +8,11 @@ import java.util.List;
 
 public class trainer {
 
-    private String ID;
+   // private String ID;
     private String username;
     private String password;
     private String name;
-    private String cnic;
+    private String ID;
     private String number;
     private String age;
     private String speciality;
@@ -32,9 +32,7 @@ public class trainer {
         this.ID = ID;
     }
 
-    public String getID(String ID) {
-        return ID;
-    }
+
     //SETTERS
     public void setUsername(String username) {
         this.username = username;
@@ -48,9 +46,9 @@ public class trainer {
         this.name = name;
     }
 
-    public void setCnic(String cnic) {
-        this.cnic = cnic;
-    }
+    //public void setCnic(String cnic) {
+       // this.cnic = cnic;
+    //}
 
     public void setNumber(String number) {
         this.number = number;
@@ -77,9 +75,9 @@ public class trainer {
         return name;
     }
 
-    public String getCnic() {
-        return cnic;
-    }
+   // public String getCnic() {
+     //   return cnic;
+    //}
 
     public String getNumber() { return number; }
 
@@ -89,6 +87,10 @@ public class trainer {
 
     public String getAge() {
         return age;
+    }
+
+    public String getID() {
+        return ID;
     }
 
     public boolean validateTrainer(trainer t) {
@@ -112,6 +114,12 @@ public class trainer {
     public List<ArrayList<String>> getTrainerList(){
         //FileHandler fh = new FileHandler();
         return ph.getTrainerList();
+    }
+
+
+    public boolean setMemberTrainer(trainer t, member m){
+
+        return ph.setMemberTrainer(t, m);
     }
 
 

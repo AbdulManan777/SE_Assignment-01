@@ -2,6 +2,7 @@ package gms.SE.view;
 
 import gms.SE.App;
 import gms.SE.controller.gym;
+import gms.SE.controller.member;
 import gms.SE.controller.trainer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -43,6 +44,9 @@ public class HireTrainerController implements Initializable {
     private Text warning;
 
     @FXML
+    private Text hire;
+
+    @FXML
     private TableView<trainer> trainerTable;
     private Stage stage;
 
@@ -59,9 +63,9 @@ public class HireTrainerController implements Initializable {
 
         ObservableList<trainer> data = FXCollections.observableArrayList();
         int iteration = 0;
-        int temp = 1;
+        //int temp = 1;
         while (iteration < list.size()) {
-            data.add(new trainer(String.valueOf(temp), list.get(iteration).get(0), list.get(iteration).get(1)));
+            data.add(new trainer(list.get(iteration).get(2), list.get(iteration).get(0), list.get(iteration).get(1)));
             iteration++;
         }
         trainerTable.setItems(data);
@@ -79,29 +83,33 @@ public class HireTrainerController implements Initializable {
         stage.show();
     }
 
-    public void SubmitTrainer(ActionEvent e){
+    public void SubmitTrainer(ActionEvent e) throws IOException {
 
-        /*
+
         Node node = (Node) e.getSource();
         stage = (Stage) node.getScene().getWindow();
         member user = (member) stage.getUserData();
 
-        trainer t = new trainer();
+       /* trainer t = new trainer();
         t.setID(tid.getText());
         boolean status = gym.setMemberTrainer(t, user);
         if(status)
-        {
-            FXMLLoader fxmlLoader = new FXMLLoader(gms.sda_ap.App.class.getResource("member_menu_2.fxml"));
+        {*/
+            //hire.setText("Your trainer is hired successfully");
+
+            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("TrainerHirePayment.fxml"));
             Parent root = fxmlLoader.load();
             Scene scene = new Scene(root);
             stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
             stage.setUserData(user);
             stage.setScene(scene);
             stage.show();
-        }
-        else{
-            warning.setText("Some Error Occurred!");
-        }*/
 
-    }
+
+        }
+       // else{
+         //   warning.setText("Some Error Occurred!");
+        //}
+
+   // }
 }

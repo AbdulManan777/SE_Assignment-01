@@ -44,10 +44,13 @@ public class memberLoginController {
                 m.setUsername(t1.getText());
                 m.setPassword(t2.getText());
 
-                boolean verification = gym.authenticateMember(m);
+                int verification = gym.authenticateMember(m);
 
-                if(!verification){
-                    t.setText("Seedha nam likh humei pagal na bna");
+                if(verification==0){
+                    t.setText("Invalid User");
+                }
+                else if(verification==2){
+                    t.setText("Do you forgot your password or it is changed");
                 }
                 else {
                     FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("member_menu_2.fxml"));

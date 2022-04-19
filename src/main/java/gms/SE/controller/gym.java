@@ -14,7 +14,7 @@ public class gym {
     private int a;
     private String id;
 
-    public boolean authenticateMember(member m) {
+    public int authenticateMember(member m) {
         return m.validateMember(m);
     }
 
@@ -75,6 +75,8 @@ public class gym {
 
     }
 
+
+
     public void getRecipetGym(String r) {
         this.RecipetDate = r;
 
@@ -90,6 +92,13 @@ public class gym {
     public List<ArrayList<String>> getTrainerList() {
         trainer t = new trainer();
         return t.getTrainerList();
+    }
+
+    public boolean setMemberTrainer(trainer t, member u){
+
+        return u.setMemberTrainer(t, u);
+
+
     }
 
 

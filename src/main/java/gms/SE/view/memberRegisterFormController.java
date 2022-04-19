@@ -72,6 +72,8 @@ public class memberRegisterFormController {
 				c1.setCnic(cnicTextField.getText());
 				c1.setGender(genderTextField.getText());
 				c1.setNumber(numberTextField.getText());
+				//c1.setStatus("active");
+
 
 				boolean status = gym.registerMember(c1);
 

@@ -1,5 +1,7 @@
 package gms.SE.controller;
 
+import gms.SE.model.FileHandler;
+
 public class Payment {
 
 private member m;
@@ -44,6 +46,13 @@ public void setTrainerFee(int tf){
           Reciept r=new Reciept();
         String rec=  r.CashDeposit(this,m);
         return rec;
+    }
+
+    public boolean PaymentChecker(member m){
+
+        FileHandler f=new FileHandler();
+        boolean success=f.paymentMade(m);
+        return success;
     }
 
 

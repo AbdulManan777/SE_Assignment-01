@@ -114,8 +114,8 @@ public class unittest {
     @Test
     public void test14() {
         trainer obj = new trainer();
-        obj.setCnic("3740685671");
-        String get = obj.getCnic();
+        obj.setID("3740685671");
+        String get = obj.getID();
         assertTrue("3740685671".equals(get));
     }
     @Test

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b4301b69-fbe9-4814-9be3-11c41b3e90fd" name="Changes" comment="Final Commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/HireTrainerPayment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/gms/SE/TrainerHirePayment.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PaymentRecieved.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PaymentRecieved.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members.txt" beforeDir="false" afterPath="$PROJECT_DIR$/members.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plan.txt" beforeDir="false" afterPath="$PROJECT_DIR$/plan.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/controller/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/controller/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/controller/customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/controller/customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/controller/gym.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/controller/gym.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/controller/member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/controller/member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/controller/trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/controller/trainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/model/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/model/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/model/persistenceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/model/persistenceHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/test/unittest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/test/unittest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/HireTrainerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/HireTrainerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/TrainerRegisterFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/TrainerRegisterFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/UpdateMemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/UpdateMemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/memberLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/memberLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/memberRegisterFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/memberRegisterFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/member_menu2_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/member_menu2_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/gms/SE/HireTrainer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/gms/SE/HireTrainer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/gms/SE/UpdateMember.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/gms/SE/UpdateMember.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/gms/SE/member_menu_2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/gms/SE/member_menu_2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trainers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/trainers.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="26pqsHKSDprY1HuKVls0Mf4g9Gh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="E:/SceneBuilder-8.5.0.exe" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+  </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gms.SE.App" />
+      <module name="Software-Engineering-Assignment-01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gms.SE.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b4301b69-fbe9-4814-9be3-11c41b3e90fd" name="Changes" comment="" />
+      <created>1648131081471</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1648131081471</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1648132023603</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1648132023604</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Final Commit">
+      <created>1648215447451</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1648215447451</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Final Commit">
+      <created>1650103779755</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1650103779755</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit" />
+    <MESSAGE value="Final Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final Commit" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

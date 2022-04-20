@@ -77,6 +77,13 @@ public class UpdateMemberController {
 
         t.setText("Updated Member successfully");
 
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("member_login.fxml"));
+        Parent root=fxmlLoader.load();
+        Scene scene=new Scene(root);
+        stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+
 
     }
 

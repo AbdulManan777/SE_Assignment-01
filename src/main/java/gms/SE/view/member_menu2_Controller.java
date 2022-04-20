@@ -221,17 +221,21 @@ public class member_menu2_Controller {
         Node node = (Node) event.getSource();
         stage = (Stage) node.getScene().getWindow();
         member user = (member) stage.getUserData();
+        boolean s=user.paymentverify(user);
+        if(s==true) {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to pause membership?", ButtonType.YES, ButtonType.NO, ButtonType.CANCEL);
+            alert.showAndWait();
 
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to pause membership?" , ButtonType.YES, ButtonType.NO, ButtonType.CANCEL);
-        alert.showAndWait();
+            if (alert.getResult() == ButtonType.YES) {
 
-        if (alert.getResult() == ButtonType.YES) {
-
-            user.setStatusFLag("pause");
+                user.setStatusFLag("pause");
 
 
+            }
 
-
+        }
+        else{
+            t.setText("Sorry, you are a fee defaulter so, can't access this tool");
         }
 
     }

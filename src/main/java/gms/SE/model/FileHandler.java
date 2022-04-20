@@ -120,7 +120,7 @@ public class FileHandler extends persistenceHandler {
         br2.close();
 
 
-      tempFile2.delete();
+      //tempFile2.delete();
 
 
     }
@@ -228,7 +228,7 @@ public class FileHandler extends persistenceHandler {
             br2.close();
 
 
-            tempFile2.delete();
+            //tempFile2.delete();
 
 
 
@@ -243,10 +243,11 @@ public class FileHandler extends persistenceHandler {
 
             try {
                 BufferedReader br2 = new BufferedReader(new FileReader("members.txt"));
+               // System.out.println("Status flag: "+m.getStatusFLag());
                 while ((line = br2.readLine()) != null) {
                     String[] credentials2 = line.split(splitBy);
 
-                    if (m.getStatusFLag().equals(credentials2[6].equals("pause"))) {
+                    if (m.getCnic().equals(credentials2[2]) && (credentials2[6].equals("pause"))) {
                         return true;
                     }
 

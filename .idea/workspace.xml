@@ -5,30 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4301b69-fbe9-4814-9be3-11c41b3e90fd" name="Changes" comment="Final Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/HireTrainerPayment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/gms/SE/TrainerHirePayment.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PaymentRecieved.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PaymentRecieved.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/members.txt" beforeDir="false" afterPath="$PROJECT_DIR$/members.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plan.txt" beforeDir="false" afterPath="$PROJECT_DIR$/plan.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/controller/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/controller/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/controller/customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/controller/customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/controller/gym.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/controller/gym.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/controller/member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/controller/member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/controller/trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/controller/trainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/model/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/model/FileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/model/persistenceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/model/persistenceHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/test/unittest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/test/unittest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/HireTrainerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/HireTrainerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/TrainerRegisterFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/TrainerRegisterFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/UpdateMemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/UpdateMemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/memberLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/memberLoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/memberRegisterFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/memberRegisterFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/member_menu2_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/member_menu2_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/gms/SE/HireTrainer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/gms/SE/HireTrainer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/gms/SE/UpdateMember.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/gms/SE/UpdateMember.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/gms/SE/member_menu_2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/gms/SE/member_menu_2.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trainers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/trainers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/temp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/temp2.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +108,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650103779755</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Final Commit">
+      <created>1650360526341</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1650360526342</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Final Commit">
+      <created>1650360560754</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1650360560754</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

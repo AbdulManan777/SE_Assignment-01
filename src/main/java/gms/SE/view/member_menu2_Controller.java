@@ -44,9 +44,11 @@ public class member_menu2_Controller {
         member user = (member) stage.getUserData();
 
         boolean s=user.paymentverify(user);
-        if(s==true) {
+        boolean s2=user.statusVerify(user);
 
+        if(s==true && s2==false) {
             FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("member_select_plan.fxml"));
+
             Parent root = fxmlLoader.load();
             Scene scene = new Scene(root);
             stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
@@ -54,10 +56,17 @@ public class member_menu2_Controller {
             stage.setScene(scene);
             stage.show();
         }
-        else{
-
+        else if(s==false){
             t.setText("Sorry you are a fee defaulter, so cannot access this tool");
         }
+        else{
+
+            t.setText("Sorry your membership is paused so all features are locked for you");
+
+        }
+
+
+
 
     }
 
@@ -67,13 +76,26 @@ public class member_menu2_Controller {
         stage = (Stage) node.getScene().getWindow();
         member user = (member) stage.getUserData();
 
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("member_payment.fxml"));
-        Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root);
-        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        stage.setUserData(user);
-        stage.setScene(scene);
-        stage.show();
+
+
+        //boolean s=user.paymentverify(user);
+        boolean s2=user.statusVerify(user);
+        if(s2==false) {
+            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("member_payment.fxml"));
+
+            Parent root = fxmlLoader.load();
+            Scene scene = new Scene(root);
+            stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+            stage.setUserData(user);
+            stage.setScene(scene);
+            stage.show();
+        }
+
+        else{
+
+            t.setText("Sorry your membership is paused so all features are locked for you");
+
+        }
 
     }
 
@@ -84,9 +106,10 @@ public class member_menu2_Controller {
         member user = (member) stage.getUserData();
 
         boolean s=user.paymentverify(user);
-        if(s==true) {
-
+        boolean s2=user.statusVerify(user);
+        if(s==true && s2==false) {
             FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("HireTrainer.fxml"));
+
             Parent root = fxmlLoader.load();
             Scene scene = new Scene(root);
             stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
@@ -94,9 +117,13 @@ public class member_menu2_Controller {
             stage.setScene(scene);
             stage.show();
         }
+        else if(s==false){
+            t.setText("Sorry you are a fee defaulter, so cannot access this tool");
+        }
         else{
 
-            t.setText("Sorry you are a fee defaulter, so cannot access this tool");
+            t.setText("Sorry your membership is paused so all features are locked for you");
+
         }
 
     }
@@ -108,7 +135,8 @@ public class member_menu2_Controller {
         member user = (member) stage.getUserData();
 
         boolean s=user.paymentverify(user);
-        if(s==true) {
+        boolean s2=user.statusVerify(user);
+        if(s==true && s2==false) {
             FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("member_select_schedule.fxml"));
 
             Parent root = fxmlLoader.load();
@@ -118,8 +146,13 @@ public class member_menu2_Controller {
             stage.setScene(scene);
             stage.show();
         }
-        else{
+        else if(s==false){
             t.setText("Sorry you are a fee defaulter, so cannot access this tool");
+        }
+        else{
+
+            t.setText("Sorry your membership is paused so all features are locked for you");
+
         }
 
     }
@@ -146,7 +179,7 @@ public class member_menu2_Controller {
 
         }
         else{
-            t.setText("Sorry your membership is paused so can't access anything");
+            t.setText("Sorry your membership is paused so all features are locked for you");
         }
     }
 

@@ -5,13 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4301b69-fbe9-4814-9be3-11c41b3e90fd" name="Changes" comment="Final Commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/TrainerMenu2_Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/Trainer_Schedule_Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/gms/SE/TrainerMenu2.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/gms/SE/Trainer_Schedule.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HireTrainer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HireTrainer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PaymentRecieved.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PaymentRecieved.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/members.txt" beforeDir="false" afterPath="$PROJECT_DIR$/members.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/UpdateMemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/UpdateMemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/controller/gym.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/controller/gym.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/controller/member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/controller/member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/controller/schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/controller/schedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/controller/trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/controller/trainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/model/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/model/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/model/persistenceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/model/persistenceHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/TrainerCreatePlanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/TrainerCreatePlanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/TrainerLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/TrainerLoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/member_menu2_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/member_menu2_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/gms/SE/member_menu_2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/gms/SE/member_menu_2.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/temp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/temp2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trainers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/trainers.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +50,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/gms/SE/model/FileHandler.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -129,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650448836352</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Final Commit">
+      <created>1650449541989</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1650449541989</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

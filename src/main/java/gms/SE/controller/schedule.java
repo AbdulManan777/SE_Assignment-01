@@ -4,6 +4,8 @@ package gms.SE.controller;
 import gms.SE.model.FileHandler;
 import gms.SE.model.persistenceHandler;
 
+import java.io.IOException;
+
 public class schedule {
 
     private String ID;
@@ -38,5 +40,10 @@ public class schedule {
         //FileHandler fh = new FileHandler();
 
         return ph.setMemberSchedule(s, m);
+    }
+
+    public void setTrainerSchedule(trainer t,String s1,String s2) throws IOException {
+
+       ph.setTrainerSchedule(t,s1,s2);
     }
 }

@@ -78,7 +78,7 @@ public class TrainerCreatePlanController implements Initializable {
 
 	public void BackPressed(ActionEvent e) throws IOException {
 
-		FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("trainer_login.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("TrainerMenu2.fxml"));
 		Parent root = fxmlLoader.load();
 		Scene scene = new Scene(root);
 		stage = (Stage) ((Node) e.getSource()).getScene().getWindow();

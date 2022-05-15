@@ -15,12 +15,12 @@
             <Image url="@images/equipment.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="123.0" fitWidth="113.0" layoutX="520.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="123.0" fitWidth="113.0" layoutX="486.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/payment.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="126.0" fitWidth="113.0" layoutX="730.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="126.0" fitWidth="113.0" layoutX="668.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/schedule.png" />
          </image>
@@ -37,10 +37,10 @@
       </ImageView>
       <Button layoutX="134.0" layoutY="501.0" mnemonicParsing="false" onAction="#HireTrainer" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="Hire Trainer" />
       <Button layoutX="298.0" layoutY="278.0" mnemonicParsing="false" onAction="#SelectPlan" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="View &amp; Select Plan" />
-      <Button layoutX="516.0" layoutY="278.0" mnemonicParsing="false" onAction="#makePayment" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="makePayment" />
+      <Button layoutX="486.0" layoutY="277.0" mnemonicParsing="false" onAction="#makePayment" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="makePayment" />
       <Button layoutX="117.0" layoutY="277.0" mnemonicParsing="false" onAction="#viewEquipment" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="View Equipments" />
-      <Button layoutX="729.0" layoutY="277.0" mnemonicParsing="false" onAction="#SelectSchedule" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="Select Schedule" />
-      <Button layoutX="712.0" layoutY="493.0" mnemonicParsing="false" onAction="#BackPressed" prefHeight="47.0" prefWidth="150.0" style="-fx-background-color: #0071bc; -fx-background-radius: 20; -fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: white;" text="Back" />
+      <Button layoutX="668.0" layoutY="278.0" mnemonicParsing="false" onAction="#SelectSchedule" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="Select Schedule" />
+      <Button layoutX="807.0" layoutY="493.0" mnemonicParsing="false" onAction="#BackPressed" prefHeight="47.0" prefWidth="150.0" style="-fx-background-color: #0071bc; -fx-background-radius: 20; -fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: white;" text="Back" />
       <Button layoutX="278.0" layoutY="501.0" mnemonicParsing="false" onAction="#UpdateProfile" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="Update Profile" />
       <Text fx:id="t" fill="#da260a" layoutX="397.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" />
       <Button layoutX="426.0" layoutY="501.0" mnemonicParsing="false" onAction="#PauseMembership" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="Pause Membership" />
@@ -52,6 +52,18 @@
       <ImageView fitHeight="104.0" fitWidth="124.0" layoutX="447.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/images.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="609.0" layoutY="501.0" mnemonicParsing="false" onAction="#CancelMembership" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="Cancel Membership" />
+      <Button layoutX="810.0" layoutY="277.0" mnemonicParsing="false" onAction="#ResumeMembership" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="Resume Membership" />
+      <ImageView fitHeight="126.0" fitWidth="113.0" layoutX="834.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/resume.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="104.0" fitWidth="134.0" layoutX="629.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/cancel.jpg" />
          </image>
       </ImageView>
    </children>

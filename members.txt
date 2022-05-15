@@ -1,4 +1,2 @@
-manan,123456,3871265,Abdul Manan,Male,390128765,pause,NULL,NULL
 saad,123487,3210965,Saad Sagheer,Male,39861043,active,NULL,NULL
-umer,1235416,3819723,Umer Mnasoor,Male,651423,active,NULL,NULL
-shoaib,76543,2781663,Shoaib Asghar,Male,03128766,active,NULL,NULL
+manan,1234567,3871265,Abdul Manan,Male,390128765,active,NULL,NULL

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gms.SE.view.TrainerMenu2_Controller">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: white; -fx-border-color: #0071bc; -fx-border-width: 15;">
+         <children>
+            <Label layoutX="398.0" layoutY="66.0" style="-fx-font-size: 30; -fx-font-weight: bold; -fx-text-fill: #0071bc;" text="Trainer Menu" />
+            <Button layoutX="45.0" layoutY="492.0" mnemonicParsing="false" onAction="#BackPressed" prefHeight="47.0" prefWidth="150.0" style="-fx-background-color: #0071bc; -fx-background-radius: 20; -fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: white;" text="Back" />
+            <Button layoutX="138.0" layoutY="293.0" mnemonicParsing="false" onAction="#createPlan" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="Create Plan" />
+            <Button layoutX="388.0" layoutY="293.0" mnemonicParsing="false" onAction="#createSchedule" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="Create Schedule" />
+            <Button layoutX="659.0" layoutY="293.0" mnemonicParsing="false" onAction="#quitJob" style="-fx-background-color: #0071bc; -fx-text-fill: white;" text="Quit Job" />
+            <ImageView fitHeight="92.0" fitWidth="150.0" layoutX="140.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/pngtree-work-plan-list-png-image_4896609.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="78.0" fitWidth="108.0" layoutX="398.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/download.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="73.0" fitWidth="107.0" layoutX="647.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/trainer_job.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

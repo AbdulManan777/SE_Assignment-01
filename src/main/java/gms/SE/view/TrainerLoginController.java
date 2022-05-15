@@ -55,10 +55,11 @@ public class TrainerLoginController {
 				t.setText("Incorrect Username or Password!");
 			}
 			else{
-				FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("trainer_create_plan.fxml"));
+				FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("TrainerMenu2.fxml"));
 				Parent root = fxmlLoader.load();
 				Scene scene = new Scene(root);
 				stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+				stage.setUserData(tr);
 				stage.setScene(scene);
 				stage.show();
 			}

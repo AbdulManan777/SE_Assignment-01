@@ -1,6 +1,7 @@
 package gms.SE.view;
 
 import gms.SE.App;
+import gms.SE.controller.gym;
 import gms.SE.controller.member;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -237,6 +238,73 @@ public class member_menu2_Controller {
         else{
             t.setText("Sorry, you are a fee defaulter so, can't access this tool");
         }
+
+    }
+
+
+
+    public void CancelMembership(ActionEvent event) throws IOException {
+
+        Node node = (Node) event.getSource();
+        stage = (Stage) node.getScene().getWindow();
+        member user = (member) stage.getUserData();
+        boolean s=user.paymentverify(user);
+        if(s){
+
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to cancel your membership? After that you will no longer remain a member", ButtonType.YES, ButtonType.NO, ButtonType.CANCEL);
+            alert.showAndWait();
+
+            if (alert.getResult() == ButtonType.YES) {
+
+                gym g=new gym();
+                g.cancelMember(user);
+
+
+                FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("member_login.fxml"));
+                Parent root = fxmlLoader.load();
+                Scene scene = new Scene(root);
+                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+
+
+            }
+
+
+
+
+        }
+
+        else{
+            t.setText("Sorry, you are a fee defaulter so, clear your dues first");
+        }
+
+
+
+    }
+
+    public void ResumeMembership(ActionEvent event) throws IOException {
+
+
+        Node node = (Node) event.getSource();
+        stage = (Stage) node.getScene().getWindow();
+        member user = (member) stage.getUserData();
+
+        if(user.getStatusFLag2(user).equals("active")){
+            t.setText("Your membership is already active");
+
+
+        }
+
+        else{
+
+            gym g=new gym();
+            g.ResumeMembership(user);
+            t.setText("Your membership is resumed again, you can now access all features again");
+        }
+
+
+
 
     }
 

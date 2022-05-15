@@ -264,6 +264,195 @@ public class FileHandler extends persistenceHandler {
 
 
 
+    @Override
+    public void cancelMember(member m) throws IOException {
+
+
+
+
+
+        File originalFile = new File("members.txt");
+        BufferedReader br = new BufferedReader(new FileReader(originalFile));
+
+        // Construct the new file that will later be renamed to the original
+        // filename.
+        File tempFile = new File("temp3.txt");
+        PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
+
+
+        // Read from the original file and write to the new
+        // unless content matches data to be removed.
+
+        while ((line = br.readLine()) != null) {
+
+            String[] credentials = line.split(splitBy);
+            if (credentials[2].equals(m.getCnic())) {
+
+
+            } else {
+
+                pw.write(credentials[0] + "," + credentials[1] + "," + credentials[2] + "," + credentials[3] + "," + credentials[4] + "," + credentials[5] + "," + credentials[6] + "," + "NULL" + "," + "NULL");
+                pw.write("\n");
+            }
+        }
+
+
+
+        // pw.println(line);
+        pw.flush();
+
+        pw.close();
+        br.close();
+
+
+
+
+
+        PrintWriter writer = new PrintWriter("members.txt");
+        writer.print("");
+        writer.close();
+
+
+
+        File originalFile2 = new File("temp3.txt");
+        BufferedReader br2 = new BufferedReader(new FileReader(originalFile2));
+
+        // Construct the new file that will later be renamed to the original
+        // filename.
+        File tempFile2 = new File("members.txt");
+        PrintWriter pw2 = new PrintWriter(new FileWriter(tempFile2));
+
+
+        // Read from the original file and write to the new
+        // unless content matches data to be removed.
+        while ((line = br2.readLine()) != null) {
+            String[] credentials2 = line.split(splitBy);
+
+            pw2.write(credentials2[0] + "," + credentials2[1] + "," + credentials2[2] + "," + credentials2[3] + "," + credentials2[4] + "," + credentials2[5] + "," +credentials2[6]+","+ "NULL" + "," + "NULL");
+            pw2.write("\n");
+
+
+        }
+
+        //pw2.println(line);
+        pw2.flush();
+
+        pw2.close();
+        br2.close();
+
+
+
+    }
+
+    public String getStatusFlag2(member m) throws IOException {
+
+
+        File originalFile = new File("members.txt");
+        BufferedReader br = new BufferedReader(new FileReader(originalFile));
+
+        // Read from the original file and write to the new
+        // unless content matches data to be removed.
+
+        while ((line = br.readLine()) != null) {
+
+            String[] credentials = line.split(splitBy);
+            if (credentials[2].equals(m.getCnic())) {
+
+                return credentials[6];
+            }
+        }
+        return "L";
+
+    }
+
+
+    public void ResumeMembership(member m) throws IOException {
+
+
+
+
+
+        File originalFile = new File("members.txt");
+        BufferedReader br = new BufferedReader(new FileReader(originalFile));
+
+        // Construct the new file that will later be renamed to the original
+        // filename.
+        File tempFile = new File("temp4.txt");
+        PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
+
+
+        // Read from the original file and write to the new
+        // unless content matches data to be removed.
+
+        while ((line = br.readLine()) != null) {
+
+            String[] credentials = line.split(splitBy);
+            if (credentials[2].equals(m.getCnic())) {
+
+                pw.write(credentials[0] + "," + credentials[1] + "," + credentials[2] + "," + credentials[3] + "," + credentials[4] + "," + credentials[5] + "," + "active" + "," + "NULL" + "," + "NULL");
+                pw.write("\n");
+
+
+            } else {
+
+                pw.write(credentials[0] + "," + credentials[1] + "," + credentials[2] + "," + credentials[3] + "," + credentials[4] + "," + credentials[5] + "," + credentials[6] + "," + "NULL" + "," + "NULL");
+                pw.write("\n");
+            }
+        }
+
+
+
+        // pw.println(line);
+        pw.flush();
+
+        pw.close();
+        br.close();
+
+
+
+
+        PrintWriter writer = new PrintWriter("members.txt");
+        writer.print("");
+        writer.close();
+
+
+
+        File originalFile2 = new File("temp4.txt");
+        BufferedReader br2 = new BufferedReader(new FileReader(originalFile2));
+
+        // Construct the new file that will later be renamed to the original
+        // filename.
+        File tempFile2 = new File("members.txt");
+        PrintWriter pw2 = new PrintWriter(new FileWriter(tempFile2));
+
+
+        // Read from the original file and write to the new
+        // unless content matches data to be removed.
+        while ((line = br2.readLine()) != null) {
+            String[] credentials2 = line.split(splitBy);
+
+            pw2.write(credentials2[0] + "," + credentials2[1] + "," + credentials2[2] + "," + credentials2[3] + "," + credentials2[4] + "," + credentials2[5] + "," +credentials2[6]+","+ "NULL" + "," + "NULL");
+            pw2.write("\n");
+
+
+        }
+
+        //pw2.println(line);
+        pw2.flush();
+
+        pw2.close();
+        br2.close();
+
+
+
+
+
+
+
+    }
+
+
+
 
 
 
@@ -602,4 +791,98 @@ public class FileHandler extends persistenceHandler {
 
     }
 
+
+    @Override
+    public void setTrainerSchedule(trainer t,String s1,String s2) throws IOException {
+
+        FileWriter fw = new FileWriter("Trainer_Schedule.txt", true);
+        BufferedWriter bw = new BufferedWriter(fw);
+
+
+        bw.write(t.getUsername() + "," + t.getID()+ "," +s1+","+s2);
+        bw.write("\n");
+        bw.close();
+
+
+
+    }
+
+    @Override
+    public void quitJob(trainer t) throws IOException {
+
+
+
+        File originalFile = new File("trainers.txt");
+        BufferedReader br = new BufferedReader(new FileReader(originalFile));
+
+        // Construct the new file that will later be renamed to the original
+        // filename.
+        File tempFile = new File("temp5.txt");
+        PrintWriter pw = new PrintWriter(new FileWriter(tempFile));
+
+
+        // Read from the original file and write to the new
+        // unless content matches data to be removed.
+
+        while ((line = br.readLine()) != null) {
+
+            String[] credentials = line.split(splitBy);
+            if (credentials[2].equals(t.getID())) {
+
+
+            } else {
+
+                pw.write(credentials[0] + "," + credentials[1] + "," + credentials[2] + "," + credentials[3] + "," + credentials[4] + "," + credentials[5] + "," + credentials[6] + "," + "NULL" + "," + "NULL");
+                pw.write("\n");
+            }
+        }
+
+
+
+        // pw.println(line);
+        pw.flush();
+
+        pw.close();
+        br.close();
+
+
+
+
+
+        PrintWriter writer = new PrintWriter("trainers.txt");
+        writer.print("");
+        writer.close();
+
+
+
+        File originalFile2 = new File("temp5.txt");
+        BufferedReader br2 = new BufferedReader(new FileReader(originalFile2));
+
+        // Construct the new file that will later be renamed to the original
+        // filename.
+        File tempFile2 = new File("trainers.txt");
+        PrintWriter pw2 = new PrintWriter(new FileWriter(tempFile2));
+
+
+        // Read from the original file and write to the new
+        // unless content matches data to be removed.
+        while ((line = br2.readLine()) != null) {
+            String[] credentials2 = line.split(splitBy);
+
+            pw2.write(credentials2[0] + "," + credentials2[1] + "," + credentials2[2] + "," + credentials2[3] + "," + credentials2[4] + "," + credentials2[5] + "," +credentials2[6]+","+ "NULL" + "," + "NULL");
+            pw2.write("\n");
+
+
+        }
+
+        //pw2.println(line);
+        pw2.flush();
+
+        pw2.close();
+        br2.close();
+
+
+
+
+    }
 }

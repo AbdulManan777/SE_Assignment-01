@@ -3,6 +3,7 @@ package gms.SE.controller;
 import gms.SE.model.FileHandler;
 import gms.SE.model.persistenceHandler;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -120,6 +121,17 @@ public class trainer {
     public boolean setMemberTrainer(trainer t, member m){
 
         return ph.setMemberTrainer(t, m);
+    }
+
+    public void setTrainerSchedule(trainer t,String s1,String s2) throws IOException {
+
+     schedule s=new schedule();
+     s.setTrainerSchedule(t,s1,s2);
+    }
+
+    public void quitJob(trainer t) throws IOException {
+
+      ph.quitJob(t);
     }
 
 

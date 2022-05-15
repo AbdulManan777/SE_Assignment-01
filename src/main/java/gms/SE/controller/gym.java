@@ -3,6 +3,7 @@ package gms.SE.controller;
 import gms.SE.model.FileHandler;
 import gms.SE.model.persistenceHandler;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -99,6 +100,31 @@ public class gym {
         return u.setMemberTrainer(t, u);
 
 
+    }
+
+    public void cancelMember(member m) throws IOException {
+
+
+        m.cancelMember(m);
+
+    }
+
+    public void ResumeMembership(member m) throws IOException {
+           m.ResumeMembrship(m);
+
+
+    }
+
+    public void setTrainerSchedule(trainer t,String s1,String s2) throws IOException {
+
+        t.setTrainerSchedule(t,s1,s2);
+
+
+    }
+
+    public void quitJob(trainer t) throws IOException {
+
+       t.quitJob(t);
     }
 
 

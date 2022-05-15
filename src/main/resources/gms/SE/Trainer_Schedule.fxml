@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gms.SE.view.Trainer_Schedule_Controller">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: white; -fx-border-color: #0071bc; -fx-border-width: 15;">
+         <children>
+            <Label layoutX="366.0" layoutY="63.0" style="-fx-font-size: 30; -fx-font-weight: bold; -fx-text-fill: #0071bc;" text="Trainer Schedule" />
+            <Button layoutX="45.0" layoutY="492.0" mnemonicParsing="false" onAction="#BackPressed" prefHeight="47.0" prefWidth="150.0" style="-fx-background-color: #0071bc; -fx-background-radius: 20; -fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: white;" text="Back" />
+            <Label layoutX="120.0" layoutY="155.0" prefHeight="45.0" prefWidth="150.0" style="-fx-font-size: 30; -fx-font-weight: bold; -fx-text-fill: #0071bc;" text="Trainer ID" />
+            <TextField fx:id="t1" layoutX="313.0" layoutY="162.0" onMouseClicked="#MID" />
+            <Label layoutX="107.0" layoutY="243.0" prefHeight="45.0" prefWidth="219.0" style="-fx-font-size: 30; -fx-font-weight: bold; -fx-text-fill: #0071bc;" text="Days in Week" />
+            <TextField fx:id="t2" layoutX="313.0" layoutY="250.0" prefHeight="31.0" prefWidth="301.0" />
+            <Label layoutX="107.0" layoutY="331.0" prefHeight="45.0" prefWidth="116.0" style="-fx-font-size: 30; -fx-font-weight: bold; -fx-text-fill: #0071bc;" text="Timings" />
+            <TextField fx:id="t3" layoutX="313.0" layoutY="338.0" />
+            <Button layoutX="725.0" layoutY="492.0" mnemonicParsing="false" onAction="#createSchedule" prefHeight="47.0" prefWidth="150.0" style="-fx-background-color: #0071bc; -fx-background-radius: 20; -fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: white;" text="Create" />
+            <Text fx:id="t" fill="#2635d7" layoutX="368.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="42.99999666213989" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

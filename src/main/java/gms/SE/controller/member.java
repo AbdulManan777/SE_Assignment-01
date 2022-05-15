@@ -41,9 +41,10 @@ public class member {
         f.updateStatus(this);
     }
 
-    public String getStatusFLag(){
-        return statusFLag;
+    public String getStatusFLag2(member m) throws IOException {
+        return ph.getStatusFlag2(m);
     }
+
 
 
     public void setPhone(String p){ this.phone=p; }
@@ -137,6 +138,25 @@ public class member {
 
         FileHandler f=new FileHandler();
         return f.pauseMemberVerify(m);
+    }
+
+
+
+    public void cancelMember(member m) throws IOException {
+
+         ph.cancelMember(m);
+    }
+
+
+    public void ResumeMembrship(member m) throws IOException {
+
+        ph.ResumeMembership(m);
+
+    }
+
+    public String getStatusFLag() {
+
+        return this.statusFLag;
     }
 
     /*public void getmemberReciept(Reciept r) {

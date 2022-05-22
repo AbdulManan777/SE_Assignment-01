@@ -5,26 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4301b69-fbe9-4814-9be3-11c41b3e90fd" name="Changes" comment="Final Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/TrainerMenu2_Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/Trainer_Schedule_Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/gms/SE/TrainerMenu2.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/gms/SE/Trainer_Schedule.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gms/SE/exceptions/cnicException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gms/SE/exceptions/genderException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gms/SE/exceptions/passwordException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gms/SE/exceptions/usernameException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gms/SE/model/DBHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HireTrainer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HireTrainer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PaymentRecieved.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PaymentRecieved.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainer_Schedule.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Trainer_Schedule.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/members.txt" beforeDir="false" afterPath="$PROJECT_DIR$/members.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plan.txt" beforeDir="false" afterPath="$PROJECT_DIR$/plan.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/controller/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/controller/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/controller/customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/controller/customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/controller/gym.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/controller/gym.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/controller/member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/controller/member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/controller/schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/controller/schedule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/controller/trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/controller/trainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/model/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/model/FileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/model/persistenceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/model/persistenceHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/TrainerCreatePlanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/TrainerCreatePlanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/TrainerLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/TrainerLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/test/unittest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/test/unittest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/HireTrainerPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/HireTrainerPayment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/TrainerRegisterFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/TrainerRegisterFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/UpdateMemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/UpdateMemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/memberLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/memberLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/memberRegisterFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/memberRegisterFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gms/SE/view/member_menu2_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gms/SE/view/member_menu2_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/gms/SE/member_menu_2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/gms/SE/member_menu_2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/gms/SE/member_register_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/gms/SE/member_register_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/gms/SE/trainer_register_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/gms/SE/trainer_register_form.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/temp.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/temp2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/temp3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/temp4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/temp5.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trainers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/trainers.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,9 +85,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="E:/SceneBuilder-8.5.0.exe" />
-    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gms.SE.App" />
       <module name="Software-Engineering-Assignment-01" />
@@ -89,9 +101,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="unittest.test11" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Software-Engineering-Assignment-01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gms.SE.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="gms.SE.test" />
+      <option name="MAIN_CLASS_NAME" value="gms.SE.test.unittest" />
+      <option name="METHOD_NAME" value="test11" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.unittest.test11" />
       </list>
     </recent_temporary>
   </component>
@@ -153,7 +182,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650449541989</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Final Commit">
+      <created>1652613177075</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652613177075</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Final Commit">
+      <created>1652613186327</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1652613186327</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

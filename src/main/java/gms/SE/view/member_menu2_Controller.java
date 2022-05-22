@@ -3,6 +3,8 @@ package gms.SE.view;
 import gms.SE.App;
 import gms.SE.controller.gym;
 import gms.SE.controller.member;
+import gms.SE.controller.trainer;
+import gms.SE.model.DBHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,6 +18,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class member_menu2_Controller {
 
@@ -36,13 +39,17 @@ public class member_menu2_Controller {
         stage.show();
     }
 
-    public void SelectPlan(ActionEvent e) throws IOException {
+    public void SelectPlan(ActionEvent e) throws IOException, SQLException {
 
 
 
         Node node = (Node) e.getSource();
         stage = (Stage) node.getScene().getWindow();
         member user = (member) stage.getUserData();
+
+        DBHandler d=new DBHandler();
+        String i=d.getCNIC(user);
+        user.setCnic(i);
 
         boolean s=user.paymentverify(user);
         boolean s2=user.statusVerify(user);
@@ -71,15 +78,17 @@ public class member_menu2_Controller {
 
     }
 
-    public void makePayment(ActionEvent e) throws IOException {
+    public void makePayment(ActionEvent e) throws IOException, SQLException {
 
         Node node = (Node) e.getSource();
         stage = (Stage) node.getScene().getWindow();
         member user = (member) stage.getUserData();
 
 
-
         //boolean s=user.paymentverify(user);
+        DBHandler d=new DBHandler();
+        String i=d.getCNIC(user);
+        user.setCnic(i);
         boolean s2=user.statusVerify(user);
         if(s2==false) {
             FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("member_payment.fxml"));
@@ -101,10 +110,16 @@ public class member_menu2_Controller {
     }
 
 
-    public void HireTrainer(ActionEvent e) throws IOException {
+    public void HireTrainer(ActionEvent e) throws IOException, SQLException {
         Node node = (Node) e.getSource();
         stage = (Stage) node.getScene().getWindow();
         member user = (member) stage.getUserData();
+        DBHandler d=new DBHandler();
+        String i=d.getCNIC(user);
+        user.setCnic(i);
+
+
+
 
         boolean s=user.paymentverify(user);
         boolean s2=user.statusVerify(user);
@@ -130,10 +145,13 @@ public class member_menu2_Controller {
     }
 
 
-    public void SelectSchedule(ActionEvent e) throws IOException {
+    public void SelectSchedule(ActionEvent e) throws IOException, SQLException {
         Node node = (Node) e.getSource();
         stage = (Stage) node.getScene().getWindow();
         member user = (member) stage.getUserData();
+        DBHandler d=new DBHandler();
+        String i=d.getCNIC(user);
+        user.setCnic(i);
 
         boolean s=user.paymentverify(user);
         boolean s2=user.statusVerify(user);
@@ -158,11 +176,14 @@ public class member_menu2_Controller {
 
     }
 
-    public void viewEquipment(ActionEvent e) throws IOException{
+    public void viewEquipment(ActionEvent e) throws IOException, SQLException {
 
         Node node = (Node) e.getSource();
         stage = (Stage) node.getScene().getWindow();
         member user = (member) stage.getUserData();
+        DBHandler d=new DBHandler();
+        String i=d.getCNIC(user);
+        user.setCnic(i);
 
         boolean s=user.paymentverify(user);
         boolean s2=user.statusVerify(user);
@@ -185,11 +206,14 @@ public class member_menu2_Controller {
     }
 
 
-    public void UpdateProfile(ActionEvent e) throws IOException{
+    public void UpdateProfile(ActionEvent e) throws IOException, SQLException {
 
         Node node = (Node) e.getSource();
         stage = (Stage) node.getScene().getWindow();
         member user = (member) stage.getUserData();
+        DBHandler d=new DBHandler();
+        String i=d.getCNIC(user);
+        user.setCnic(i);
 
         boolean s=user.paymentverify(user);
         if(s==true) {
@@ -217,11 +241,15 @@ public class member_menu2_Controller {
     }
 
 
-    public void PauseMembership(ActionEvent event) throws IOException {
+    public void PauseMembership(ActionEvent event) throws IOException, SQLException {
 
         Node node = (Node) event.getSource();
         stage = (Stage) node.getScene().getWindow();
         member user = (member) stage.getUserData();
+
+        DBHandler d=new DBHandler();
+        String i=d.getCNIC(user);
+        user.setCnic(i);
         boolean s=user.paymentverify(user);
         if(s==true) {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to pause membership?", ButtonType.YES, ButtonType.NO, ButtonType.CANCEL);
@@ -229,7 +257,7 @@ public class member_menu2_Controller {
 
             if (alert.getResult() == ButtonType.YES) {
 
-                user.setStatusFLag("pause");
+                user.setStatusFLag(user);
 
 
             }
@@ -243,11 +271,15 @@ public class member_menu2_Controller {
 
 
 
-    public void CancelMembership(ActionEvent event) throws IOException {
+    public void CancelMembership(ActionEvent event) throws IOException, SQLException {
 
         Node node = (Node) event.getSource();
         stage = (Stage) node.getScene().getWindow();
         member user = (member) stage.getUserData();
+
+        DBHandler d=new DBHandler();
+        String i=d.getCNIC(user);
+        user.setCnic(i);
         boolean s=user.paymentverify(user);
         if(s){
 
@@ -283,12 +315,16 @@ public class member_menu2_Controller {
 
     }
 
-    public void ResumeMembership(ActionEvent event) throws IOException {
+    public void ResumeMembership(ActionEvent event) throws IOException, SQLException {
 
 
         Node node = (Node) event.getSource();
         stage = (Stage) node.getScene().getWindow();
         member user = (member) stage.getUserData();
+
+        DBHandler d=new DBHandler();
+        String i=d.getCNIC(user);
+        user.setCnic(i);
 
         if(user.getStatusFLag2(user).equals("active")){
             t.setText("Your membership is already active");

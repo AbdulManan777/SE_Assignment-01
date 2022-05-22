@@ -1,6 +1,9 @@
 package gms.SE.controller;
 
+import gms.SE.model.DBHandler;
 import gms.SE.model.FileHandler;
+
+import java.sql.SQLException;
 
 public class Payment {
 
@@ -48,11 +51,13 @@ public void setTrainerFee(int tf){
         return rec;
     }
 
-    public boolean PaymentChecker(member m){
+    public boolean PaymentChecker(member m) throws SQLException {
 
-        FileHandler f=new FileHandler();
+       /* FileHandler f=new FileHandler();
         boolean success=f.paymentMade(m);
-        return success;
+        return success;*/
+        DBHandler d=new DBHandler();
+        return d.paymentVerify(m);
     }
 
 

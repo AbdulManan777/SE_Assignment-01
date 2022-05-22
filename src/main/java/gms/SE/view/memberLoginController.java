@@ -15,6 +15,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class memberLoginController {
 
@@ -67,6 +68,8 @@ public class memberLoginController {
         } catch (incomplete_entry e1) {
 
             t.setText("Username and password cannot be empty");
+        } catch (SQLException ex) {
+            ex.printStackTrace();
         }
     }
 

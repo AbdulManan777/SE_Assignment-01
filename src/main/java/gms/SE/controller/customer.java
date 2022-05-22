@@ -1,5 +1,7 @@
 package gms.SE.controller;
 
+import java.sql.SQLException;
+
 public class customer {
 
     private String username;
@@ -64,8 +66,7 @@ public class customer {
     }
     public String getStatusFlag(){ return statusFlag; }
 
-    public boolean registerCustomer(customer c)
-    {
+    public boolean registerCustomer(customer c) throws SQLException {
         member m = new member();
         boolean status = m.registerMember(c);
         return status;

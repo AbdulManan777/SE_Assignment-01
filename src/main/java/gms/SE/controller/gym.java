@@ -1,9 +1,11 @@
 package gms.SE.controller;
 
+import gms.SE.model.DBHandler;
 import gms.SE.model.FileHandler;
 import gms.SE.model.persistenceHandler;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,11 +17,11 @@ public class gym {
     private int a;
     private String id;
 
-    public int authenticateMember(member m) {
+    public int authenticateMember(member m) throws SQLException {
         return m.validateMember(m);
     }
 
-    public boolean registerMember(customer c) {
+    public boolean registerMember(customer c) throws SQLException {
         return c.registerCustomer(c);
     }
 
@@ -78,15 +80,22 @@ public class gym {
 
 
 
+
+    public void UpdateMember(member m) throws SQLException {
+        m.UpdateMember(m);
+    }
+
     public void getRecipetGym(String r) {
         this.RecipetDate = r;
 
     }
 
-    public void StorePayment(String rec) {
+    public void StorePayment(String rec) throws SQLException {
 
         //FileHandler f = new FileHandler();
-        boolean paymentMade = ph.StorePayment(a, id, rec);
+       // boolean paymentMade = ph.StorePayment(a, id, rec);
+        DBHandler d=new DBHandler();
+        d.StorePayment(a,id,rec);
 
     }
 
@@ -95,21 +104,21 @@ public class gym {
         return t.getTrainerList();
     }
 
-    public boolean setMemberTrainer(trainer t, member u){
+    public boolean setMemberTrainer(trainer t, member u) throws SQLException {
 
         return u.setMemberTrainer(t, u);
 
 
     }
 
-    public void cancelMember(member m) throws IOException {
+    public void cancelMember(member m) throws IOException, SQLException {
 
 
         m.cancelMember(m);
 
     }
 
-    public void ResumeMembership(member m) throws IOException {
+    public void ResumeMembership(member m) throws IOException, SQLException {
            m.ResumeMembrship(m);
 
 

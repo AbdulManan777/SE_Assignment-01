@@ -2,8 +2,7 @@ package gms.SE.view;
 
 import gms.SE.App;
 import gms.SE.controller.gym;
-import gms.SE.exceptions.age;
-import gms.SE.exceptions.incomplete_entry;
+import gms.SE.exceptions.*;
 import gms.SE.controller.trainer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -84,9 +83,25 @@ public class TrainerRegisterFormController implements Initializable {
                 throw new incomplete_entry("Error");
 
 
-            } else if (Integer.valueOf(ageTextField.getText()) <= 25) {
+            } else if (Integer.valueOf(ageTextField.getText()) <= 25 ||Integer.valueOf(ageTextField.getText())>40) {
                 throw new age("Error");
-            } else {
+            }
+
+            else if(usernameTextField.getText().length()<6 || usernameTextField.getText().length()>15){
+                throw  new usernameException("Username must be atleast 6 characters or max 15 characters");
+            }
+
+            else if(passwordTextField.getText().length()<7||passwordTextField.getText().length()>20){
+                throw new passwordException("Error");
+            }
+
+
+
+            else if(cnicTextField.getText().length()!=8){
+                throw new cnicException("Error");
+            }
+
+            else {
                 trainer t = new trainer();
                 t.setUsername(usernameTextField.getText());
                 t.setPassword(passwordTextField.getText());
@@ -112,7 +127,13 @@ public class TrainerRegisterFormController implements Initializable {
         } catch (incomplete_entry e1) {
             warning.setText("Credentials Incomplete!");
         } catch (age e2) {
-            warning.setText("Age less than 25");
+            warning.setText("Age should be in the range 25-40");
+        } catch (passwordException e) {
+            warning.setText("password should be in the range 7 to 20 characters");
+        }  catch (usernameException e) {
+            warning.setText("username should be in the range 6 to 15 characters");
+        } catch (cnicException e) {
+            warning.setText("cnic must be 8 characters");
         }
     }
 

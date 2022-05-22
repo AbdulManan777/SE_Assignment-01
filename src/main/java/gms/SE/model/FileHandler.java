@@ -885,4 +885,27 @@ public class FileHandler extends persistenceHandler {
 
 
     }
+
+
+    public String SpecilaityGet(trainer t) throws IOException {
+
+
+        File originalFile = new File("trainers.txt");
+        BufferedReader br = new BufferedReader(new FileReader(originalFile));
+
+        // Read from the original file and write to the new
+        // unless content matches data to be removed.
+
+        while ((line = br.readLine()) != null) {
+
+            String[] credentials = line.split(splitBy);
+            if (credentials[2].equals(t.getID())) {
+
+                return credentials[5];
+            }
+        }
+        return "l";
+
+
+    }
 }

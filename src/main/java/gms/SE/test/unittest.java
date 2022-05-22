@@ -4,6 +4,7 @@ import gms.SE.controller.*;
 import gms.SE.model.FileHandler;
 import org.junit.Test;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -73,7 +74,7 @@ public class unittest {
         assertEquals(200,get);
     }
     @Test
-    public void test9(){
+    public void test9() throws SQLException {
         customer c=new customer();
         boolean flag=false;
         flag=c.registerCustomer(c);

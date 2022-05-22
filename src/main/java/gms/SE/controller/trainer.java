@@ -1,9 +1,11 @@
 package gms.SE.controller;
 
+import gms.SE.model.DBHandler;
 import gms.SE.model.FileHandler;
 import gms.SE.model.persistenceHandler;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -118,9 +120,11 @@ public class trainer {
     }
 
 
-    public boolean setMemberTrainer(trainer t, member m){
+    public boolean setMemberTrainer(trainer t, member m) throws SQLException {
 
-        return ph.setMemberTrainer(t, m);
+       // return ph.setMemberTrainer(t, m);
+        DBHandler d=new DBHandler();
+        return d.HireTrainer(t,m);
     }
 
     public void setTrainerSchedule(trainer t,String s1,String s2) throws IOException {

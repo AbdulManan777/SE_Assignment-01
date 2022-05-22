@@ -21,6 +21,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class PaymentController implements Initializable {
@@ -67,6 +68,8 @@ public class PaymentController implements Initializable {
         catch(incomplete_entry e1) {
 
             t.setText("Incompletely filled");
+        } catch (SQLException ex) {
+            ex.printStackTrace();
         }
 
     }

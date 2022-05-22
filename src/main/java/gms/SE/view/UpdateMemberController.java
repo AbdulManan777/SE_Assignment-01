@@ -2,6 +2,7 @@ package gms.SE.view;
 
 import gms.SE.App;
 import gms.SE.controller.member;
+import gms.SE.model.DBHandler;
 import gms.SE.model.FileHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,6 +16,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class UpdateMemberController {
 
@@ -40,7 +42,7 @@ public class UpdateMemberController {
 
 
     @FXML
-    void showDetails(ActionEvent event){
+    void showDetails(ActionEvent event) throws SQLException {
 
         Node node = (Node) event.getSource();
         stage = (Stage) node.getScene().getWindow();
@@ -50,6 +52,9 @@ public class UpdateMemberController {
 
         t2.setText(user.getPassword());
 
+        DBHandler d=new DBHandler();
+        String p=d.getPhoneN(user);
+        user.setPhone(p);
         t3.setText(user.getPhone());
 
     }
@@ -63,7 +68,7 @@ public class UpdateMemberController {
     }
 
     @FXML
-    void updateMembership(ActionEvent event) throws IOException {
+    void updateMembership(ActionEvent event) throws IOException, SQLException {
 
         Node node = (Node) event.getSource();
         stage = (Stage) node.getScene().getWindow();
@@ -72,8 +77,10 @@ public class UpdateMemberController {
         user.setPhone(t3.getText());
         user.setPassword(t2.getText());
        // System.out.println((t2.getText()));
-        FileHandler f=new FileHandler();
-        f.updateMember(user);
+        /*FileHandler f=new FileHandler();
+        f.updateMember(user);*/
+        DBHandler d=new DBHandler();
+        d.updateProfile(user);
 
         t.setText("Updated Member successfully");
 

@@ -1,1 +1,0 @@
-hamza,12345,345127,Hamza Khan,21435,Athlete,27,NULL,NULL

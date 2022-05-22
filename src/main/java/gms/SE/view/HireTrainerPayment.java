@@ -4,6 +4,8 @@ import gms.SE.App;
 import gms.SE.controller.gym;
 import gms.SE.controller.member;
 import gms.SE.controller.trainer;
+import gms.SE.model.DBHandler;
+import gms.SE.model.FileHandler;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -21,6 +23,7 @@ import org.w3c.dom.events.MouseEvent;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -65,23 +68,37 @@ public class HireTrainerPayment implements Initializable {
 
     }
 
-    public void feeConfirm(ActionEvent event) {
+    public void feeConfirm(ActionEvent event) throws SQLException, IOException {
 
-        Node node = (Node) event.getSource();
-        stage = (Stage) node.getScene().getWindow();
-        member user = (member) stage.getUserData();
-
-        trainer t = new trainer();
-        t.setID(tid.getText());
-        boolean status = gym.setMemberTrainer(t, user);
-        if (status) {
-            hire.setText("Your trainer is hired successfully");
-
-
+        if(tid.getText().equals("")){
+            hire.setText("Please enter the trainer ID");
         }
 
-        else{
-            hire.setText("Some Error occured");
+        else {
+
+            Node node = (Node) event.getSource();
+            stage = (Stage) node.getScene().getWindow();
+            member user = (member) stage.getUserData();
+            DBHandler d = new DBHandler();
+            String i = d.getCNIC(user);
+            user.setCnic(i);
+
+
+            trainer t = new trainer();
+            t.setID(tid.getText());
+            FileHandler f = new FileHandler();
+            t.setSpeciality(f.SpecilaityGet(t));
+            // t.setID(tid.getText());
+
+            boolean status = gym.setMemberTrainer(t, user);
+            if (status) {
+                hire.setText("Your trainer is hired successfully");
+
+
+            } else {
+                hire.setText("Some Error occured");
+            }
+
         }
 
 
